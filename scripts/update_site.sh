@@ -37,7 +37,7 @@ printf '{}' > "$SRC/exec.json"
 
 OUT="$(sh "$DEPLOY" deployments create \
   --site-id "$SITE_ID" \
-  --title "火山方舟项目消费台账（自动更新）" \
+  --title "方舟项目账单台账（自动更新）" \
   --description "来源 /workspace，静态发布 public/index.html；火山方舟 ARK 按项目、按天消费账单台账，包含趋势图、项目汇总、明细台账与矩阵，供财务记录与核对。" \
   --type static-web \
   --source-dir "$SRC" \

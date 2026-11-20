@@ -12,7 +12,7 @@ HTML = r"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>火山方舟 · 项目消费台账</title>
+<title>方舟项目账单台账</title>
 <style>
 :root{
   --bg:#f5f7fb; --card:#ffffff; --ink:#101828; --sub:#667085; --line:#e6eaf2;
@@ -94,7 +94,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
     <div class="brand">
       <div class="logo">方</div>
       <div>
-        <h1>火山方舟 · 项目消费台账</h1>
+        <h1>方舟项目账单台账</h1>
         <div class="sub">按天 × 项目统计 · 数据来源：火山引擎账单中心分账明细</div>
       </div>
     </div>

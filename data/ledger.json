@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20 12:15:04",
+ "generatedAt": "2026-11-20 12:21:53",
  "currency": "CNY",
  "source": "火山引擎账单中心 · 分账明细（ListSplitBillDetail，按天×项目）",
  "note": "分账明细存在 T+2 延迟；当日数据可能仍在滚动更新。金额为税前应付（PretaxAmount）。",
