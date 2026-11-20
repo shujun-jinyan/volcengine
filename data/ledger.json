@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20 12:25:15",
+ "generatedAt": "2026-11-20 12:30:42",
  "currency": "CNY",
  "source": "火山引擎账单中心 · 分账明细（ListSplitBillDetail，按天×项目）",
  "note": "分账明细存在 T+2 延迟；当日数据可能仍在滚动更新。消费金额=税前应付(PretaxAmount)，原价=刊例价(OriginalBillAmount)，优惠=原价-税前应付。",
@@ -14,6 +14,7 @@
  "totalPretax": 136930.01,
  "totalOriginal": 279769.19,
  "totalDiscount": 142839.18,
+ "totalTokens": 7721378298949.0,
  "cells": [
   {
    "date": "2026-10-15",
@@ -22,6 +23,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 1500000.0,
    "rows": 3,
    "discount": 0.0
   },
@@ -32,6 +34,7 @@
    "pretax": 1.21,
    "payable": 1.21,
    "original": 3.24,
+   "tokens": 10616313.0,
    "rows": 6,
    "discount": 2.03
   },
@@ -42,6 +45,7 @@
    "pretax": 1.84,
    "payable": 1.84,
    "original": 4.26,
+   "tokens": 25232200.0,
    "rows": 3,
    "discount": 2.42
   },
@@ -52,6 +56,7 @@
    "pretax": 1.13,
    "payable": 1.13,
    "original": 2.65,
+   "tokens": 16955757.0,
    "rows": 5,
    "discount": 1.52
   },
@@ -62,6 +67,7 @@
    "pretax": 5.55,
    "payable": 5.55,
    "original": 11.93,
+   "tokens": 57736530.0,
    "rows": 13,
    "discount": 6.38
   },
@@ -72,6 +78,7 @@
    "pretax": 3.84,
    "payable": 3.84,
    "original": 8.77,
+   "tokens": 53238292.0,
    "rows": 13,
    "discount": 4.93
   },
@@ -82,6 +89,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "rows": 1,
    "discount": 0.0
   },
@@ -92,6 +100,7 @@
    "pretax": 4.05,
    "payable": 4.05,
    "original": 8.42,
+   "tokens": 49465051.0,
    "rows": 12,
    "discount": 4.37
   },
@@ -102,6 +111,7 @@
    "pretax": 42.5,
    "payable": 42.5,
    "original": 69.39,
+   "tokens": 98777564.0,
    "rows": 9,
    "discount": 26.89
   },
@@ -112,6 +122,7 @@
    "pretax": 22.95,
    "payable": 22.95,
    "original": 48.5,
+   "tokens": 251105614.0,
    "rows": 15,
    "discount": 25.55
   },
@@ -122,6 +133,7 @@
    "pretax": 2.28,
    "payable": 2.28,
    "original": 5.63,
+   "tokens": 9016915.0,
    "rows": 8,
    "discount": 3.35
   },
@@ -132,6 +144,7 @@
    "pretax": 49.67,
    "payable": 49.67,
    "original": 122.91,
+   "tokens": 157964923.0,
    "rows": 15,
    "discount": 73.24
   },
@@ -142,6 +155,7 @@
    "pretax": 3.94,
    "payable": 3.94,
    "original": 9.85,
+   "tokens": 23281706.0,
    "rows": 9,
    "discount": 5.91
   },
@@ -152,6 +166,7 @@
    "pretax": 4.35,
    "payable": 4.35,
    "original": 9.28,
+   "tokens": 103347389.0,
    "rows": 6,
    "discount": 4.93
   },
@@ -162,6 +177,7 @@
    "pretax": 55.69,
    "payable": 55.69,
    "original": 135.14,
+   "tokens": 216742653.0,
    "rows": 14,
    "discount": 79.45
   },
@@ -172,6 +188,7 @@
    "pretax": 12.83,
    "payable": 12.83,
    "original": 30.37,
+   "tokens": 96878533.0,
    "rows": 15,
    "discount": 17.54
   },
@@ -182,6 +199,7 @@
    "pretax": 33.95,
    "payable": 33.95,
    "original": 85.05,
+   "tokens": 78532220.0,
    "rows": 3,
    "discount": 51.1
   },
@@ -192,6 +210,7 @@
    "pretax": 204.81,
    "payable": 204.81,
    "original": 419.4,
+   "tokens": 3258700822.0,
    "rows": 12,
    "discount": 214.59
   },
@@ -202,6 +221,7 @@
    "pretax": 105.05,
    "payable": 105.05,
    "original": 108.67,
+   "tokens": 53873906.0,
    "rows": 6,
    "discount": 3.62
   },
@@ -212,6 +232,7 @@
    "pretax": 458.45,
    "payable": 458.45,
    "original": 927.58,
+   "tokens": 10479027021.0,
    "rows": 14,
    "discount": 469.13
   },
@@ -222,6 +243,7 @@
    "pretax": 409.12,
    "payable": 409.12,
    "original": 848.52,
+   "tokens": 8898576866.0,
    "rows": 15,
    "discount": 439.4
   },
@@ -232,6 +254,7 @@
    "pretax": 512.82,
    "payable": 512.82,
    "original": 1061.07,
+   "tokens": 15048589339.0,
    "rows": 9,
    "discount": 548.25
   },
@@ -242,6 +265,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 3263825.0,
    "rows": 2,
    "discount": 0.0
   },
@@ -252,6 +276,7 @@
    "pretax": 853.36,
    "payable": 853.36,
    "original": 1718.32,
+   "tokens": 29799347961.0,
    "rows": 9,
    "discount": 864.96
   },
@@ -262,6 +287,7 @@
    "pretax": 897.96,
    "payable": 897.96,
    "original": 1806.35,
+   "tokens": 23220723040.0,
    "rows": 15,
    "discount": 908.39
   },
@@ -272,6 +298,7 @@
    "pretax": 1336.6,
    "payable": 1336.6,
    "original": 2671.26,
+   "tokens": 34009796609.0,
    "rows": 15,
    "discount": 1334.66
   },
@@ -282,6 +309,7 @@
    "pretax": 910.42,
    "payable": 910.42,
    "original": 1803.47,
+   "tokens": 23739425286.0,
    "rows": 15,
    "discount": 893.05
   },
@@ -292,6 +320,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "rows": 1,
    "discount": 0.0
   },
@@ -302,6 +331,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 41922217.0,
    "rows": 2,
    "discount": 0.0
   },
@@ -312,6 +342,7 @@
    "pretax": 1054.5,
    "payable": 1054.5,
    "original": 2045.65,
+   "tokens": 23127259268.0,
    "rows": 8,
    "discount": 991.15
   },
@@ -322,6 +353,7 @@
    "pretax": 1442.29,
    "payable": 1442.29,
    "original": 2926.98,
+   "tokens": 63604853311.0,
    "rows": 15,
    "discount": 1484.69
   },
@@ -332,6 +364,7 @@
    "pretax": 0.08,
    "payable": 0.08,
    "original": 0.25,
+   "tokens": 1413966120.0,
    "rows": 5,
    "discount": 0.17
   },
@@ -342,6 +375,7 @@
    "pretax": 1433.56,
    "payable": 1433.56,
    "original": 2758.33,
+   "tokens": 39669567389.0,
    "rows": 12,
    "discount": 1324.77
   },
@@ -352,6 +386,7 @@
    "pretax": 1571.08,
    "payable": 1571.08,
    "original": 3104.74,
+   "tokens": 79561085749.0,
    "rows": 15,
    "discount": 1533.66
   },
@@ -362,6 +397,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 10566548.0,
    "rows": 2,
    "discount": 0.0
   },
@@ -372,6 +408,7 @@
    "pretax": 473.84,
    "payable": 473.84,
    "original": 891.02,
+   "tokens": 31113384216.0,
    "rows": 5,
    "discount": 417.18
   },
@@ -382,6 +419,7 @@
    "pretax": 1232.64,
    "payable": 1232.64,
    "original": 2494.26,
+   "tokens": 62683538818.0,
    "rows": 9,
    "discount": 1261.62
   },
@@ -392,6 +430,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.03,
+   "tokens": 133806469.0,
    "rows": 3,
    "discount": 0.03
   },
@@ -402,6 +441,7 @@
    "pretax": 310.6,
    "payable": 310.6,
    "original": 599.17,
+   "tokens": 26342156988.0,
    "rows": 5,
    "discount": 288.57
   },
@@ -412,6 +452,7 @@
    "pretax": 1008.44,
    "payable": 1008.44,
    "original": 1943.36,
+   "tokens": 52603984862.0,
    "rows": 9,
    "discount": 934.92
   },
@@ -422,6 +463,7 @@
    "pretax": 0.07,
    "payable": 0.07,
    "original": 0.24,
+   "tokens": 419766633.0,
    "rows": 3,
    "discount": 0.17
   },
@@ -432,6 +474,7 @@
    "pretax": 0.05,
    "payable": 0.05,
    "original": 0.16,
+   "tokens": 600492123.0,
    "rows": 6,
    "discount": 0.11
   },
@@ -442,6 +485,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.07,
+   "tokens": 875843820.0,
    "rows": 5,
    "discount": 0.06
   },
@@ -452,6 +496,7 @@
    "pretax": 1.16,
    "payable": 1.16,
    "original": 3.0,
+   "tokens": 761928395.0,
    "rows": 3,
    "discount": 1.84
   },
@@ -462,6 +507,7 @@
    "pretax": 1332.58,
    "payable": 1332.58,
    "original": 2507.6,
+   "tokens": 40740412607.0,
    "rows": 8,
    "discount": 1175.02
   },
@@ -472,6 +518,7 @@
    "pretax": 1565.02,
    "payable": 1565.02,
    "original": 3038.96,
+   "tokens": 81084857378.0,
    "rows": 21,
    "discount": 1473.94
   },
@@ -482,6 +529,7 @@
    "pretax": 1.91,
    "payable": 1.91,
    "original": 3.36,
+   "tokens": 2724796449.0,
    "rows": 3,
    "discount": 1.45
   },
@@ -492,6 +540,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 222139054.0,
    "rows": 3,
    "discount": 0.0
   },
@@ -502,6 +551,7 @@
    "pretax": 2566.36,
    "payable": 2566.36,
    "original": 4973.68,
+   "tokens": 47938090127.0,
    "rows": 12,
    "discount": 2407.32
   },
@@ -512,6 +562,7 @@
    "pretax": 1343.98,
    "payable": 1343.98,
    "original": 2628.78,
+   "tokens": 94751144129.0,
    "rows": 21,
    "discount": 1284.8
   },
@@ -522,6 +573,7 @@
    "pretax": 1.21,
    "payable": 1.21,
    "original": 2.74,
+   "tokens": 4229787524.0,
    "rows": 6,
    "discount": 1.53
   },
@@ -532,6 +584,7 @@
    "pretax": 4225.66,
    "payable": 4225.66,
    "original": 8748.51,
+   "tokens": 53576033340.0,
    "rows": 12,
    "discount": 4522.85
   },
@@ -542,6 +595,7 @@
    "pretax": 1043.79,
    "payable": 1043.79,
    "original": 2185.6,
+   "tokens": 98090898184.0,
    "rows": 21,
    "discount": 1141.81
   },
@@ -552,6 +606,7 @@
    "pretax": 8.15,
    "payable": 8.15,
    "original": 12.77,
+   "tokens": 17835285216.0,
    "rows": 6,
    "discount": 4.62
   },
@@ -562,6 +617,7 @@
    "pretax": 24.16,
    "payable": 24.16,
    "original": 37.24,
+   "tokens": 22093236909.0,
    "rows": 6,
    "discount": 13.08
   },
@@ -572,6 +628,7 @@
    "pretax": 4548.88,
    "payable": 4548.88,
    "original": 9433.63,
+   "tokens": 57287597194.0,
    "rows": 12,
    "discount": 4884.75
   },
@@ -582,6 +639,7 @@
    "pretax": 943.55,
    "payable": 943.55,
    "original": 1873.74,
+   "tokens": 110257882221.0,
    "rows": 21,
    "discount": 930.19
   },
@@ -592,6 +650,7 @@
    "pretax": 0.13,
    "payable": 0.13,
    "original": 0.47,
+   "tokens": 1210557947.0,
    "rows": 3,
    "discount": 0.34
   },
@@ -602,6 +661,7 @@
    "pretax": 4.94,
    "payable": 4.94,
    "original": 7.27,
+   "tokens": 5464033608.0,
    "rows": 3,
    "discount": 2.33
   },
@@ -612,6 +672,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.04,
+   "tokens": 238534378.0,
    "rows": 3,
    "discount": 0.03
   },
@@ -622,6 +683,7 @@
    "pretax": 21.42,
    "payable": 21.42,
    "original": 36.02,
+   "tokens": 19289218163.0,
    "rows": 6,
    "discount": 14.6
   },
@@ -632,6 +694,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 6969848.0,
    "rows": 2,
    "discount": 0.0
   },
@@ -642,6 +705,7 @@
    "pretax": 2031.82,
    "payable": 2031.82,
    "original": 3927.08,
+   "tokens": 37650719023.0,
    "rows": 12,
    "discount": 1895.26
   },
@@ -652,6 +716,7 @@
    "pretax": 725.64,
    "payable": 725.64,
    "original": 1504.54,
+   "tokens": 68926318105.0,
    "rows": 21,
    "discount": 778.9
   },
@@ -662,6 +727,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "rows": 1,
    "discount": 0.0
   },
@@ -672,6 +738,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.03,
+   "tokens": 58245575.0,
    "rows": 3,
    "discount": 0.02
   },
@@ -682,6 +749,7 @@
    "pretax": 17.49,
    "payable": 17.49,
    "original": 29.39,
+   "tokens": 23648477828.0,
    "rows": 3,
    "discount": 11.9
   },
@@ -692,6 +760,7 @@
    "pretax": 541.5,
    "payable": 541.5,
    "original": 1207.19,
+   "tokens": 31506684247.0,
    "rows": 5,
    "discount": 665.69
   },
@@ -702,6 +771,7 @@
    "pretax": 1333.77,
    "payable": 1333.77,
    "original": 2537.46,
+   "tokens": 40279455799.0,
    "rows": 6,
    "discount": 1203.69
   },
@@ -712,6 +782,7 @@
    "pretax": 457.43,
    "payable": 457.43,
    "original": 958.07,
+   "tokens": 79788271384.0,
    "rows": 12,
    "discount": 500.64
   },
@@ -722,6 +793,7 @@
    "pretax": 0.04,
    "payable": 0.04,
    "original": 0.13,
+   "tokens": 669481187.0,
    "rows": 3,
    "discount": 0.09
   },
@@ -732,6 +804,7 @@
    "pretax": 10.37,
    "payable": 10.37,
    "original": 16.8,
+   "tokens": 14451583675.0,
    "rows": 3,
    "discount": 6.43
   },
@@ -742,6 +815,7 @@
    "pretax": 1418.97,
    "payable": 1418.97,
    "original": 3096.33,
+   "tokens": 38602255628.0,
    "rows": 5,
    "discount": 1677.36
   },
@@ -752,6 +826,7 @@
    "pretax": 858.79,
    "payable": 858.79,
    "original": 1590.22,
+   "tokens": 41878364937.0,
    "rows": 6,
    "discount": 731.43
   },
@@ -762,6 +837,7 @@
    "pretax": 504.56,
    "payable": 504.56,
    "original": 1062.81,
+   "tokens": 74930178949.0,
    "rows": 12,
    "discount": 558.25
   },
@@ -772,6 +848,7 @@
    "pretax": 5.33,
    "payable": 5.33,
    "original": 9.96,
+   "tokens": 14893366442.0,
    "rows": 6,
    "discount": 4.63
   },
@@ -782,6 +859,7 @@
    "pretax": 34.64,
    "payable": 34.64,
    "original": 59.11,
+   "tokens": 46290168862.0,
    "rows": 6,
    "discount": 24.47
   },
@@ -792,6 +870,7 @@
    "pretax": 4873.9,
    "payable": 4873.9,
    "original": 10378.04,
+   "tokens": 89004550071.0,
    "rows": 6,
    "discount": 5504.14
   },
@@ -802,6 +881,7 @@
    "pretax": 0.02,
    "payable": 0.02,
    "original": 0.07,
+   "tokens": 324594784.0,
    "rows": 3,
    "discount": 0.05
   },
@@ -812,6 +892,7 @@
    "pretax": 2681.48,
    "payable": 2681.48,
    "original": 5184.62,
+   "tokens": 92746789108.0,
    "rows": 9,
    "discount": 2503.14
   },
@@ -822,6 +903,7 @@
    "pretax": 679.92,
    "payable": 679.92,
    "original": 1350.32,
+   "tokens": 183465240165.0,
    "rows": 21,
    "discount": 670.4
   },
@@ -832,6 +914,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.01,
+   "tokens": 1177.0,
    "rows": 2,
    "discount": 0.01
   },
@@ -842,6 +925,7 @@
    "pretax": 2.16,
    "payable": 2.16,
    "original": 5.25,
+   "tokens": 31282206435.0,
    "rows": 6,
    "discount": 3.09
   },
@@ -852,6 +936,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 93913782.0,
    "rows": 2,
    "discount": 0.0
   },
@@ -862,6 +947,7 @@
    "pretax": 51.7,
    "payable": 51.7,
    "original": 87.84,
+   "tokens": 143053787328.0,
    "rows": 6,
    "discount": 36.14
   },
@@ -872,6 +958,7 @@
    "pretax": 2632.62,
    "payable": 2632.62,
    "original": 5731.91,
+   "tokens": 174037061604.0,
    "rows": 6,
    "discount": 3099.29
   },
@@ -882,6 +969,7 @@
    "pretax": 9550.23,
    "payable": 9550.23,
    "original": 19765.67,
+   "tokens": 133275307112.0,
    "rows": 6,
    "discount": 10215.44
   },
@@ -892,6 +980,7 @@
    "pretax": 2773.82,
    "payable": 2773.82,
    "original": 5430.0,
+   "tokens": 174131425701.0,
    "rows": 12,
    "discount": 2656.18
   },
@@ -902,6 +991,7 @@
    "pretax": 512.84,
    "payable": 512.84,
    "original": 945.33,
+   "tokens": 331748126853.0,
    "rows": 21,
    "discount": 432.49
   },
@@ -912,6 +1002,7 @@
    "pretax": 142.3,
    "payable": 142.3,
    "original": 142.36,
+   "tokens": 674452898.0,
    "rows": 3,
    "discount": 0.06
   },
@@ -922,6 +1013,7 @@
    "pretax": 7.12,
    "payable": 7.12,
    "original": 16.56,
+   "tokens": 91041927883.0,
    "rows": 6,
    "discount": 9.44
   },
@@ -932,6 +1024,7 @@
    "pretax": 25.0,
    "payable": 25.0,
    "original": 39.95,
+   "tokens": 147114202081.0,
    "rows": 6,
    "discount": 14.95
   },
@@ -942,6 +1035,7 @@
    "pretax": 17.32,
    "payable": 17.32,
    "original": 32.08,
+   "tokens": 85203240094.0,
    "rows": 6,
    "discount": 14.76
   },
@@ -952,6 +1046,7 @@
    "pretax": 177.62,
    "payable": 177.62,
    "original": 373.3,
+   "tokens": 168001785996.0,
    "rows": 6,
    "discount": 195.68
   },
@@ -962,6 +1057,7 @@
    "pretax": 23130.35,
    "payable": 23130.35,
    "original": 48579.09,
+   "tokens": 298819266677.0,
    "rows": 6,
    "discount": 25448.74
   },
@@ -972,6 +1068,7 @@
    "pretax": 3049.74,
    "payable": 3049.74,
    "original": 5978.81,
+   "tokens": 298851835012.0,
    "rows": 12,
    "discount": 2929.07
   },
@@ -982,6 +1079,7 @@
    "pretax": 284.94,
    "payable": 284.94,
    "original": 478.53,
+   "tokens": 468857048683.0,
    "rows": 21,
    "discount": 193.59
   },
@@ -992,6 +1090,7 @@
    "pretax": 253.83,
    "payable": 253.83,
    "original": 254.26,
+   "tokens": 1168567361.0,
    "rows": 3,
    "discount": 0.43
   },
@@ -1002,6 +1101,7 @@
    "pretax": 9.54,
    "payable": 9.54,
    "original": 25.98,
+   "tokens": 32461562148.0,
    "rows": 5,
    "discount": 16.44
   },
@@ -1012,6 +1112,7 @@
    "pretax": 30.31,
    "payable": 30.31,
    "original": 50.59,
+   "tokens": 188348834898.0,
    "rows": 6,
    "discount": 20.28
   },
@@ -1022,6 +1123,7 @@
    "pretax": 37.9,
    "payable": 37.9,
    "original": 69.31,
+   "tokens": 188414252262.0,
    "rows": 6,
    "discount": 31.41
   },
@@ -1032,6 +1134,7 @@
    "pretax": 613.88,
    "payable": 613.88,
    "original": 1233.89,
+   "tokens": 320359120499.0,
    "rows": 6,
    "discount": 620.01
   },
@@ -1042,6 +1145,7 @@
    "pretax": 27.32,
    "payable": 27.32,
    "original": 60.73,
+   "tokens": 107357615512.0,
    "rows": 3,
    "discount": 33.41
   },
@@ -1052,6 +1156,7 @@
    "pretax": 22486.88,
    "payable": 22486.88,
    "original": 46207.27,
+   "tokens": 355312905597.0,
    "rows": 6,
    "discount": 23720.39
   },
@@ -1062,6 +1167,7 @@
    "pretax": 6233.92,
    "payable": 6233.92,
    "original": 12697.69,
+   "tokens": 355341091566.0,
    "rows": 11,
    "discount": 6463.77
   },
@@ -1072,6 +1178,7 @@
    "pretax": 348.63,
    "payable": 348.63,
    "original": 633.57,
+   "tokens": 647666693792.0,
    "rows": 21,
    "discount": 284.94
   },
@@ -1082,6 +1189,7 @@
    "pretax": 0.03,
    "payable": 0.03,
    "original": 0.09,
+   "tokens": 5464895114.0,
    "rows": 3,
    "discount": 0.06
   },
@@ -1092,6 +1200,7 @@
    "pretax": 98.41,
    "payable": 98.41,
    "original": 98.71,
+   "tokens": 451381800.0,
    "rows": 3,
    "discount": 0.3
   },
@@ -1102,6 +1211,7 @@
    "pretax": 1.52,
    "payable": 1.52,
    "original": 6.9,
+   "tokens": 22268578571.0,
    "rows": 5,
    "discount": 5.38
   },
@@ -1112,6 +1222,7 @@
    "pretax": 11.57,
    "payable": 11.57,
    "original": 18.0,
+   "tokens": 53507774545.0,
    "rows": 6,
    "discount": 6.43
   },
@@ -1122,6 +1233,7 @@
    "pretax": 15.33,
    "payable": 15.33,
    "original": 28.81,
+   "tokens": 81574906039.0,
    "rows": 6,
    "discount": 13.48
   },
@@ -1132,6 +1244,7 @@
    "pretax": 361.35,
    "payable": 361.35,
    "original": 706.8,
+   "tokens": 179207141336.0,
    "rows": 6,
    "discount": 345.45
   },
@@ -1142,6 +1255,7 @@
    "pretax": 12528.82,
    "payable": 12528.82,
    "original": 25931.36,
+   "tokens": 179207141336.0,
    "rows": 6,
    "discount": 13402.54
   },
@@ -1152,6 +1266,7 @@
    "pretax": 3089.08,
    "payable": 3089.08,
    "original": 6799.07,
+   "tokens": 179388778913.0,
    "rows": 12,
    "discount": 3709.99
   },
@@ -1162,6 +1277,7 @@
    "pretax": 153.81,
    "payable": 153.81,
    "original": 249.6,
+   "tokens": 208807909038.0,
    "rows": 18,
    "discount": 95.79
   }
@@ -1175,6 +1291,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "discount": 0.0
   },
   {
@@ -1185,6 +1302,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "discount": 0.0
   },
   {
@@ -1195,6 +1313,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "discount": 0.0
   },
   {
@@ -1205,6 +1324,7 @@
    "pretax": 1.21,
    "payable": 1.21,
    "original": 3.24,
+   "tokens": 10616313.0,
    "discount": 2.03
   },
   {
@@ -1215,6 +1335,7 @@
    "pretax": 1.84,
    "payable": 1.84,
    "original": 4.26,
+   "tokens": 25232200.0,
    "discount": 2.42
   },
   {
@@ -1225,6 +1346,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 113.0,
    "discount": 0.0
   },
   {
@@ -1235,6 +1357,7 @@
    "pretax": 1.13,
    "payable": 1.13,
    "original": 2.65,
+   "tokens": 16955644.0,
    "discount": 1.52
   },
   {
@@ -1245,6 +1368,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 113.0,
    "discount": 0.0
   },
   {
@@ -1255,6 +1379,7 @@
    "pretax": 5.55,
    "payable": 5.55,
    "original": 11.93,
+   "tokens": 57736417.0,
    "discount": 6.38
   },
   {
@@ -1265,6 +1390,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 244.0,
    "discount": 0.0
   },
   {
@@ -1275,6 +1401,7 @@
    "pretax": 3.84,
    "payable": 3.84,
    "original": 8.77,
+   "tokens": 53238048.0,
    "discount": 4.93
   },
   {
@@ -1285,6 +1412,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "discount": 0.0
   },
   {
@@ -1295,6 +1423,7 @@
    "pretax": 4.05,
    "payable": 4.05,
    "original": 8.42,
+   "tokens": 49465051.0,
    "discount": 4.37
   },
   {
@@ -1305,6 +1434,7 @@
    "pretax": 18.44,
    "payable": 18.44,
    "original": 45.22,
+   "tokens": 57191256.0,
    "discount": 26.78
   },
   {
@@ -1315,6 +1445,7 @@
    "pretax": 24.06,
    "payable": 24.06,
    "original": 24.16,
+   "tokens": 41586308.0,
    "discount": 0.1
   },
   {
@@ -1325,6 +1456,7 @@
    "pretax": 9.66,
    "payable": 9.66,
    "original": 24.17,
+   "tokens": 34496672.0,
    "discount": 14.51
   },
   {
@@ -1335,6 +1467,7 @@
    "pretax": 13.29,
    "payable": 13.29,
    "original": 24.34,
+   "tokens": 216608942.0,
    "discount": 11.05
   },
   {
@@ -1345,6 +1478,7 @@
    "pretax": 2.28,
    "payable": 2.28,
    "original": 5.63,
+   "tokens": 9016744.0,
    "discount": 3.35
   },
   {
@@ -1355,6 +1489,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 171.0,
    "discount": 0.0
   },
   {
@@ -1365,6 +1500,7 @@
    "pretax": 43.39,
    "payable": 43.39,
    "original": 108.88,
+   "tokens": 88182099.0,
    "discount": 65.49
   },
   {
@@ -1375,6 +1511,7 @@
    "pretax": 6.28,
    "payable": 6.28,
    "original": 14.04,
+   "tokens": 69782824.0,
    "discount": 7.76
   },
   {
@@ -1385,6 +1522,7 @@
    "pretax": 0.87,
    "payable": 0.87,
    "original": 2.26,
+   "tokens": 244634.0,
    "discount": 1.39
   },
   {
@@ -1395,6 +1533,7 @@
    "pretax": 3.07,
    "payable": 3.07,
    "original": 7.58,
+   "tokens": 23037072.0,
    "discount": 4.51
   },
   {
@@ -1405,6 +1544,7 @@
    "pretax": 4.35,
    "payable": 4.35,
    "original": 9.28,
+   "tokens": 103347389.0,
    "discount": 4.93
   },
   {
@@ -1415,6 +1555,7 @@
    "pretax": 45.16,
    "payable": 45.16,
    "original": 113.17,
+   "tokens": 83095449.0,
    "discount": 68.01
   },
   {
@@ -1425,6 +1566,7 @@
    "pretax": 10.53,
    "payable": 10.53,
    "original": 21.97,
+   "tokens": 133647204.0,
    "discount": 11.44
   },
   {
@@ -1435,6 +1577,7 @@
    "pretax": 6.89,
    "payable": 6.89,
    "original": 17.3,
+   "tokens": 18905315.0,
    "discount": 10.41
   },
   {
@@ -1445,6 +1588,7 @@
    "pretax": 5.94,
    "payable": 5.94,
    "original": 13.07,
+   "tokens": 77973218.0,
    "discount": 7.13
   },
   {
@@ -1455,6 +1599,7 @@
    "pretax": 33.95,
    "payable": 33.95,
    "original": 85.05,
+   "tokens": 78532220.0,
    "discount": 51.1
   },
   {
@@ -1465,6 +1610,7 @@
    "pretax": 204.81,
    "payable": 204.81,
    "original": 419.4,
+   "tokens": 3258700822.0,
    "discount": 214.59
   },
   {
@@ -1475,6 +1621,7 @@
    "pretax": 102.68,
    "payable": 102.68,
    "original": 102.7,
+   "tokens": 29745273.0,
    "discount": 0.02
   },
   {
@@ -1485,6 +1632,7 @@
    "pretax": 2.37,
    "payable": 2.37,
    "original": 5.97,
+   "tokens": 24128633.0,
    "discount": 3.6
   },
   {
@@ -1495,6 +1643,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.02,
+   "tokens": 1242.0,
    "discount": 0.01
   },
   {
@@ -1505,6 +1654,7 @@
    "pretax": 458.44,
    "payable": 458.44,
    "original": 927.56,
+   "tokens": 10479025779.0,
    "discount": 469.12
   },
   {
@@ -1515,6 +1665,7 @@
    "pretax": 1.6,
    "payable": 1.6,
    "original": 4.08,
+   "tokens": 882362.0,
    "discount": 2.48
   },
   {
@@ -1525,6 +1676,7 @@
    "pretax": 407.52,
    "payable": 407.52,
    "original": 844.44,
+   "tokens": 8897694504.0,
    "discount": 436.92
   },
   {
@@ -1535,6 +1687,7 @@
    "pretax": 1.43,
    "payable": 1.43,
    "original": 3.59,
+   "tokens": 387962.0,
    "discount": 2.16
   },
   {
@@ -1545,6 +1698,7 @@
    "pretax": 511.39,
    "payable": 511.39,
    "original": 1057.48,
+   "tokens": 15048201377.0,
    "discount": 546.09
   },
   {
@@ -1555,6 +1709,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 3263825.0,
    "discount": 0.0
   },
   {
@@ -1565,6 +1720,7 @@
    "pretax": 0.11,
    "payable": 0.11,
    "original": 0.31,
+   "tokens": 32439.0,
    "discount": 0.2
   },
   {
@@ -1575,6 +1731,7 @@
    "pretax": 853.25,
    "payable": 853.25,
    "original": 1718.01,
+   "tokens": 29799315522.0,
    "discount": 864.76
   },
   {
@@ -1585,6 +1742,7 @@
    "pretax": 2.47,
    "payable": 2.47,
    "original": 6.23,
+   "tokens": 2083623.0,
    "discount": 3.76
   },
   {
@@ -1595,6 +1753,7 @@
    "pretax": 895.49,
    "payable": 895.49,
    "original": 1800.12,
+   "tokens": 23218639417.0,
    "discount": 904.63
   },
   {
@@ -1605,6 +1764,7 @@
    "pretax": 62.35,
    "payable": 62.35,
    "original": 156.69,
+   "tokens": 106571590.0,
    "discount": 94.34
   },
   {
@@ -1615,6 +1775,7 @@
    "pretax": 1274.25,
    "payable": 1274.25,
    "original": 2514.57,
+   "tokens": 33903225019.0,
    "discount": 1240.32
   },
   {
@@ -1625,6 +1786,7 @@
    "pretax": 8.75,
    "payable": 8.75,
    "original": 22.27,
+   "tokens": 19087699.0,
    "discount": 13.52
   },
   {
@@ -1635,6 +1797,7 @@
    "pretax": 901.67,
    "payable": 901.67,
    "original": 1781.2,
+   "tokens": 23720337587.0,
    "discount": 879.53
   },
   {
@@ -1645,6 +1808,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "discount": 0.0
   },
   {
@@ -1655,6 +1819,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 41922217.0,
    "discount": 0.0
   },
   {
@@ -1665,6 +1830,7 @@
    "pretax": 1054.5,
    "payable": 1054.5,
    "original": 2045.65,
+   "tokens": 23127259019.0,
    "discount": 991.15
   },
   {
@@ -1675,6 +1841,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 249.0,
    "discount": 0.0
   },
   {
@@ -1685,6 +1852,7 @@
    "pretax": 208.55,
    "payable": 208.55,
    "original": 522.71,
+   "tokens": 400548685.0,
    "discount": 314.16
   },
   {
@@ -1695,6 +1863,7 @@
    "pretax": 1233.74,
    "payable": 1233.74,
    "original": 2404.27,
+   "tokens": 63204304626.0,
    "discount": 1170.53
   },
   {
@@ -1705,6 +1874,7 @@
    "pretax": 0.08,
    "payable": 0.08,
    "original": 0.25,
+   "tokens": 1413966120.0,
    "discount": 0.17
   },
   {
@@ -1715,6 +1885,7 @@
    "pretax": 1433.45,
    "payable": 1433.45,
    "original": 2758.22,
+   "tokens": 39665749217.0,
    "discount": 1324.77
   },
   {
@@ -1725,6 +1896,7 @@
    "pretax": 0.11,
    "payable": 0.11,
    "original": 0.12,
+   "tokens": 3818172.0,
    "discount": 0.01
   },
   {
@@ -1735,6 +1907,7 @@
    "pretax": 107.04,
    "payable": 107.04,
    "original": 269.65,
+   "tokens": 229587315.0,
    "discount": 162.61
   },
   {
@@ -1745,6 +1918,7 @@
    "pretax": 1464.04,
    "payable": 1464.04,
    "original": 2835.09,
+   "tokens": 79331498434.0,
    "discount": 1371.05
   },
   {
@@ -1755,6 +1929,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 10566548.0,
    "discount": 0.0
   },
   {
@@ -1765,6 +1940,7 @@
    "pretax": 473.84,
    "payable": 473.84,
    "original": 891.02,
+   "tokens": 31113384169.0,
    "discount": 417.18
   },
   {
@@ -1775,6 +1951,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 47.0,
    "discount": 0.0
   },
   {
@@ -1785,6 +1962,7 @@
    "pretax": 155.89,
    "payable": 155.89,
    "original": 391.88,
+   "tokens": 456770480.0,
    "discount": 235.99
   },
   {
@@ -1795,6 +1973,7 @@
    "pretax": 1076.75,
    "payable": 1076.75,
    "original": 2102.38,
+   "tokens": 62226768338.0,
    "discount": 1025.63
   },
   {
@@ -1805,6 +1984,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.03,
+   "tokens": 133806469.0,
    "discount": 0.03
   },
   {
@@ -1815,6 +1995,7 @@
    "pretax": 310.6,
    "payable": 310.6,
    "original": 599.17,
+   "tokens": 26342156952.0,
    "discount": 288.57
   },
   {
@@ -1825,6 +2006,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 36.0,
    "discount": 0.0
   },
   {
@@ -1835,6 +2017,7 @@
    "pretax": 169.56,
    "payable": 169.56,
    "original": 425.98,
+   "tokens": 302986926.0,
    "discount": 256.42
   },
   {
@@ -1845,6 +2028,7 @@
    "pretax": 838.88,
    "payable": 838.88,
    "original": 1517.38,
+   "tokens": 52300997936.0,
    "discount": 678.5
   },
   {
@@ -1855,6 +2039,7 @@
    "pretax": 0.07,
    "payable": 0.07,
    "original": 0.24,
+   "tokens": 419766633.0,
    "discount": 0.17
   },
   {
@@ -1865,6 +2050,7 @@
    "pretax": 0.05,
    "payable": 0.05,
    "original": 0.16,
+   "tokens": 600492123.0,
    "discount": 0.11
   },
   {
@@ -1875,6 +2061,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.07,
+   "tokens": 875843820.0,
    "discount": 0.06
   },
   {
@@ -1885,6 +2072,7 @@
    "pretax": 1.16,
    "payable": 1.16,
    "original": 3.0,
+   "tokens": 761928395.0,
    "discount": 1.84
   },
   {
@@ -1895,6 +2083,7 @@
    "pretax": 1332.58,
    "payable": 1332.58,
    "original": 2507.59,
+   "tokens": 40740412515.0,
    "discount": 1175.01
   },
   {
@@ -1905,6 +2094,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 92.0,
    "discount": 0.0
   },
   {
@@ -1915,6 +2105,7 @@
    "pretax": 221.93,
    "payable": 221.93,
    "original": 556.8,
+   "tokens": 472541432.0,
    "discount": 334.87
   },
   {
@@ -1925,6 +2116,7 @@
    "pretax": 1340.76,
    "payable": 1340.76,
    "original": 2479.78,
+   "tokens": 80595322841.0,
    "discount": 1139.02
   },
   {
@@ -1935,6 +2127,7 @@
    "pretax": 2.33,
    "payable": 2.33,
    "original": 2.37,
+   "tokens": 16993105.0,
    "discount": 0.04
   },
   {
@@ -1945,6 +2138,7 @@
    "pretax": 1.91,
    "payable": 1.91,
    "original": 3.36,
+   "tokens": 2724796449.0,
    "discount": 1.45
   },
   {
@@ -1955,6 +2149,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 222139054.0,
    "discount": 0.0
   },
   {
@@ -1965,6 +2160,7 @@
    "pretax": 2566.29,
    "payable": 2566.29,
    "original": 4973.54,
+   "tokens": 47929568777.0,
    "discount": 2407.25
   },
   {
@@ -1975,6 +2171,7 @@
    "pretax": 0.07,
    "payable": 0.07,
    "original": 0.14,
+   "tokens": 8521350.0,
    "discount": 0.07
   },
   {
@@ -1985,6 +2182,7 @@
    "pretax": 202.44,
    "payable": 202.44,
    "original": 507.9,
+   "tokens": 472204871.0,
    "discount": 305.46
   },
   {
@@ -1995,6 +2193,7 @@
    "pretax": 1125.31,
    "payable": 1125.31,
    "original": 2104.45,
+   "tokens": 94087555730.0,
    "discount": 979.14
   },
   {
@@ -2005,6 +2204,7 @@
    "pretax": 16.23,
    "payable": 16.23,
    "original": 16.43,
+   "tokens": 191383528.0,
    "discount": 0.2
   },
   {
@@ -2015,6 +2215,7 @@
    "pretax": 1.21,
    "payable": 1.21,
    "original": 2.74,
+   "tokens": 4229787524.0,
    "discount": 1.53
   },
   {
@@ -2025,6 +2226,7 @@
    "pretax": 4225.59,
    "payable": 4225.59,
    "original": 8748.4,
+   "tokens": 53571354997.0,
    "discount": 4522.81
   },
   {
@@ -2035,6 +2237,7 @@
    "pretax": 0.07,
    "payable": 0.07,
    "original": 0.11,
+   "tokens": 4678343.0,
    "discount": 0.04
   },
   {
@@ -2045,6 +2248,7 @@
    "pretax": 164.41,
    "payable": 164.41,
    "original": 412.34,
+   "tokens": 424407793.0,
    "discount": 247.93
   },
   {
@@ -2055,6 +2259,7 @@
    "pretax": 865.2,
    "payable": 865.2,
    "original": 1758.99,
+   "tokens": 97582010959.0,
    "discount": 893.79
   },
   {
@@ -2065,6 +2270,7 @@
    "pretax": 14.18,
    "payable": 14.18,
    "original": 14.28,
+   "tokens": 84479432.0,
    "discount": 0.1
   },
   {
@@ -2075,6 +2281,7 @@
    "pretax": 8.15,
    "payable": 8.15,
    "original": 12.77,
+   "tokens": 17835285216.0,
    "discount": 4.62
   },
   {
@@ -2085,6 +2292,7 @@
    "pretax": 24.16,
    "payable": 24.16,
    "original": 37.24,
+   "tokens": 22093236909.0,
    "discount": 13.08
   },
   {
@@ -2095,6 +2303,7 @@
    "pretax": 4548.15,
    "payable": 4548.15,
    "original": 9432.84,
+   "tokens": 57277827329.0,
    "discount": 4884.69
   },
   {
@@ -2105,6 +2314,7 @@
    "pretax": 0.73,
    "payable": 0.73,
    "original": 0.79,
+   "tokens": 9769865.0,
    "discount": 0.06
   },
   {
@@ -2115,6 +2325,7 @@
    "pretax": 99.15,
    "payable": 99.15,
    "original": 249.18,
+   "tokens": 134385715.0,
    "discount": 150.03
   },
   {
@@ -2125,6 +2336,7 @@
    "pretax": 814.6,
    "payable": 814.6,
    "original": 1594.63,
+   "tokens": 109916980800.0,
    "discount": 780.03
   },
   {
@@ -2135,6 +2347,7 @@
    "pretax": 29.8,
    "payable": 29.8,
    "original": 29.92,
+   "tokens": 206515706.0,
    "discount": 0.12
   },
   {
@@ -2145,6 +2358,7 @@
    "pretax": 0.13,
    "payable": 0.13,
    "original": 0.47,
+   "tokens": 1210557947.0,
    "discount": 0.34
   },
   {
@@ -2155,6 +2369,7 @@
    "pretax": 4.94,
    "payable": 4.94,
    "original": 7.27,
+   "tokens": 5464033608.0,
    "discount": 2.33
   },
   {
@@ -2165,6 +2380,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.04,
+   "tokens": 238534378.0,
    "discount": 0.03
   },
   {
@@ -2175,6 +2391,7 @@
    "pretax": 21.42,
    "payable": 21.42,
    "original": 36.02,
+   "tokens": 19289218163.0,
    "discount": 14.6
   },
   {
@@ -2185,6 +2402,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 6969848.0,
    "discount": 0.0
   },
   {
@@ -2195,6 +2413,7 @@
    "pretax": 2030.71,
    "payable": 2030.71,
    "original": 3925.89,
+   "tokens": 37650286377.0,
    "discount": 1895.18
   },
   {
@@ -2205,6 +2424,7 @@
    "pretax": 1.11,
    "payable": 1.11,
    "original": 1.19,
+   "tokens": 432646.0,
    "discount": 0.08
   },
   {
@@ -2215,6 +2435,7 @@
    "pretax": 162.4,
    "payable": 162.4,
    "original": 407.09,
+   "tokens": 320243229.0,
    "discount": 244.69
   },
   {
@@ -2225,6 +2446,7 @@
    "pretax": 557.7,
    "payable": 557.7,
    "original": 1091.85,
+   "tokens": 68554845788.0,
    "discount": 534.15
   },
   {
@@ -2235,6 +2457,7 @@
    "pretax": 5.54,
    "payable": 5.54,
    "original": 5.59,
+   "tokens": 51229088.0,
    "discount": 0.05
   },
   {
@@ -2245,6 +2468,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 500000.0,
    "discount": 0.0
   },
   {
@@ -2255,6 +2479,7 @@
    "pretax": 0.01,
    "payable": 0.01,
    "original": 0.03,
+   "tokens": 58245575.0,
    "discount": 0.02
   },
   {
@@ -2265,6 +2490,7 @@
    "pretax": 17.49,
    "payable": 17.49,
    "original": 29.39,
+   "tokens": 23648477828.0,
    "discount": 11.9
   },
   {
@@ -2275,6 +2501,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.01,
+   "tokens": 178932.0,
    "discount": 0.01
   },
   {
@@ -2285,6 +2512,7 @@
    "pretax": 541.5,
    "payable": 541.5,
    "original": 1207.19,
+   "tokens": 31506505315.0,
    "discount": 665.69
   },
   {
@@ -2295,6 +2523,7 @@
    "pretax": 1333.67,
    "payable": 1333.67,
    "original": 2537.3,
+   "tokens": 40278209295.0,
    "discount": 1203.63
   },
   {
@@ -2305,6 +2534,7 @@
    "pretax": 0.1,
    "payable": 0.1,
    "original": 0.15,
+   "tokens": 1246504.0,
    "discount": 0.05
   },
   {
@@ -2315,6 +2545,7 @@
    "pretax": 105.26,
    "payable": 105.26,
    "original": 264.94,
+   "tokens": 188647553.0,
    "discount": 159.68
   },
   {
@@ -2325,6 +2556,7 @@
    "pretax": 343.44,
    "payable": 343.44,
    "original": 684.29,
+   "tokens": 79348499503.0,
    "discount": 340.85
   },
   {
@@ -2335,6 +2567,7 @@
    "pretax": 8.73,
    "payable": 8.73,
    "original": 8.84,
+   "tokens": 251124328.0,
    "discount": 0.11
   },
   {
@@ -2345,6 +2578,7 @@
    "pretax": 0.04,
    "payable": 0.04,
    "original": 0.13,
+   "tokens": 669481187.0,
    "discount": 0.09
   },
   {
@@ -2355,6 +2589,7 @@
    "pretax": 10.37,
    "payable": 10.37,
    "original": 16.8,
+   "tokens": 14451583675.0,
    "discount": 6.43
   },
   {
@@ -2365,6 +2600,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 61527.0,
    "discount": 0.0
   },
   {
@@ -2375,6 +2611,7 @@
    "pretax": 1418.97,
    "payable": 1418.97,
    "original": 3096.33,
+   "tokens": 38602194101.0,
    "discount": 1677.36
   },
   {
@@ -2385,6 +2622,7 @@
    "pretax": 858.53,
    "payable": 858.53,
    "original": 1589.81,
+   "tokens": 41841533708.0,
    "discount": 731.28
   },
   {
@@ -2395,6 +2633,7 @@
    "pretax": 0.26,
    "payable": 0.26,
    "original": 0.41,
+   "tokens": 36831229.0,
    "discount": 0.15
   },
   {
@@ -2405,6 +2644,7 @@
    "pretax": 126.63,
    "payable": 126.63,
    "original": 317.82,
+   "tokens": 329563609.0,
    "discount": 191.19
   },
   {
@@ -2415,6 +2655,7 @@
    "pretax": 346.96,
    "payable": 346.96,
    "original": 713.72,
+   "tokens": 73737976813.0,
    "discount": 366.76
   },
   {
@@ -2425,6 +2666,7 @@
    "pretax": 30.97,
    "payable": 30.97,
    "original": 31.27,
+   "tokens": 862638527.0,
    "discount": 0.3
   },
   {
@@ -2435,6 +2677,7 @@
    "pretax": 5.33,
    "payable": 5.33,
    "original": 9.96,
+   "tokens": 14893366442.0,
    "discount": 4.63
   },
   {
@@ -2445,6 +2688,7 @@
    "pretax": 34.64,
    "payable": 34.64,
    "original": 59.11,
+   "tokens": 46290168862.0,
    "discount": 24.47
   },
   {
@@ -2455,6 +2699,7 @@
    "pretax": 4873.9,
    "payable": 4873.9,
    "original": 10378.04,
+   "tokens": 89004550071.0,
    "discount": 5504.14
   },
   {
@@ -2465,6 +2710,7 @@
    "pretax": 0.02,
    "payable": 0.02,
    "original": 0.07,
+   "tokens": 324594784.0,
    "discount": 0.05
   },
   {
@@ -2475,6 +2721,7 @@
    "pretax": 2681.42,
    "payable": 2681.42,
    "original": 5184.48,
+   "tokens": 92704740113.0,
    "discount": 2503.06
   },
   {
@@ -2485,6 +2732,7 @@
    "pretax": 0.06,
    "payable": 0.06,
    "original": 0.14,
+   "tokens": 42048995.0,
    "discount": 0.08
   },
   {
@@ -2495,6 +2743,7 @@
    "pretax": 118.68,
    "payable": 118.68,
    "original": 297.76,
+   "tokens": 268040336.0,
    "discount": 179.08
   },
   {
@@ -2505,6 +2754,7 @@
    "pretax": 477.66,
    "payable": 477.66,
    "original": 968.66,
+   "tokens": 182514862346.0,
    "discount": 491.0
   },
   {
@@ -2515,6 +2765,7 @@
    "pretax": 83.58,
    "payable": 83.58,
    "original": 83.9,
+   "tokens": 682337483.0,
    "discount": 0.32
   },
   {
@@ -2525,6 +2776,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.01,
+   "tokens": 1177.0,
    "discount": 0.01
   },
   {
@@ -2535,6 +2787,7 @@
    "pretax": 2.16,
    "payable": 2.16,
    "original": 5.25,
+   "tokens": 31282206435.0,
    "discount": 3.09
   },
   {
@@ -2545,6 +2798,7 @@
    "pretax": 0.0,
    "payable": 0.0,
    "original": 0.0,
+   "tokens": 93913782.0,
    "discount": 0.0
   },
   {
@@ -2555,6 +2809,7 @@
    "pretax": 51.7,
    "payable": 51.7,
    "original": 87.84,
+   "tokens": 143053787328.0,
    "discount": 36.14
   },
   {
@@ -2565,6 +2820,7 @@
    "pretax": 2632.62,
    "payable": 2632.62,
    "original": 5731.91,
+   "tokens": 174037061604.0,
    "discount": 3099.29
   },
   {
@@ -2575,6 +2831,7 @@
    "pretax": 9550.23,
    "payable": 9550.23,
    "original": 19765.67,
+   "tokens": 133275307112.0,
    "discount": 10215.44
   },
   {
@@ -2585,6 +2842,7 @@
    "pretax": 2773.51,
    "payable": 2773.51,
    "original": 5429.4,
+   "tokens": 174032010259.0,
    "discount": 2655.89
   },
   {
@@ -2595,6 +2853,7 @@
    "pretax": 0.31,
    "payable": 0.31,
    "original": 0.61,
+   "tokens": 99415442.0,
    "discount": 0.3
   },
   {
@@ -2605,6 +2864,7 @@
    "pretax": 138.46,
    "payable": 138.46,
    "original": 347.41,
+   "tokens": 316744784.0,
    "discount": 208.95
   },
   {
@@ -2615,6 +2875,7 @@
    "pretax": 236.54,
    "payable": 236.54,
    "original": 459.89,
+   "tokens": 330700110366.0,
    "discount": 223.35
   },
   {
@@ -2625,6 +2886,7 @@
    "pretax": 137.84,
    "payable": 137.84,
    "original": 138.02,
+   "tokens": 731271703.0,
    "discount": 0.18
   },
   {
@@ -2635,6 +2897,7 @@
    "pretax": 142.3,
    "payable": 142.3,
    "original": 142.36,
+   "tokens": 674452898.0,
    "discount": 0.06
   },
   {
@@ -2645,6 +2908,7 @@
    "pretax": 7.12,
    "payable": 7.12,
    "original": 16.56,
+   "tokens": 91041927883.0,
    "discount": 9.44
   },
   {
@@ -2655,6 +2919,7 @@
    "pretax": 25.0,
    "payable": 25.0,
    "original": 39.95,
+   "tokens": 147114202081.0,
    "discount": 14.95
   },
   {
@@ -2665,6 +2930,7 @@
    "pretax": 17.32,
    "payable": 17.32,
    "original": 32.08,
+   "tokens": 85203240094.0,
    "discount": 14.76
   },
   {
@@ -2675,6 +2941,7 @@
    "pretax": 177.62,
    "payable": 177.62,
    "original": 373.3,
+   "tokens": 168001785996.0,
    "discount": 195.68
   },
   {
@@ -2685,6 +2952,7 @@
    "pretax": 23130.35,
    "payable": 23130.35,
    "original": 48579.09,
+   "tokens": 298819266677.0,
    "discount": 25448.74
   },
   {
@@ -2695,6 +2963,7 @@
    "pretax": 3049.5,
    "payable": 3049.5,
    "original": 5978.45,
+   "tokens": 298819266677.0,
    "discount": 2928.95
   },
   {
@@ -2705,6 +2974,7 @@
    "pretax": 0.24,
    "payable": 0.24,
    "original": 0.36,
+   "tokens": 32568335.0,
    "discount": 0.12
   },
   {
@@ -2715,6 +2985,7 @@
    "pretax": 42.21,
    "payable": 42.21,
    "original": 107.02,
+   "tokens": 130143538.0,
    "discount": 64.81
   },
   {
@@ -2725,6 +2996,7 @@
    "pretax": 115.58,
    "payable": 115.58,
    "original": 244.15,
+   "tokens": 466850078928.0,
    "discount": 128.57
   },
   {
@@ -2735,6 +3007,7 @@
    "pretax": 127.15,
    "payable": 127.15,
    "original": 127.36,
+   "tokens": 1876826217.0,
    "discount": 0.21
   },
   {
@@ -2745,6 +3018,7 @@
    "pretax": 253.83,
    "payable": 253.83,
    "original": 254.26,
+   "tokens": 1168567361.0,
    "discount": 0.43
   },
   {
@@ -2755,6 +3029,7 @@
    "pretax": 9.54,
    "payable": 9.54,
    "original": 25.98,
+   "tokens": 32461562148.0,
    "discount": 16.44
   },
   {
@@ -2765,6 +3040,7 @@
    "pretax": 30.31,
    "payable": 30.31,
    "original": 50.59,
+   "tokens": 188348834898.0,
    "discount": 20.28
   },
   {
@@ -2775,6 +3051,7 @@
    "pretax": 37.9,
    "payable": 37.9,
    "original": 69.31,
+   "tokens": 188414252262.0,
    "discount": 31.41
   },
   {
@@ -2785,6 +3062,7 @@
    "pretax": 613.88,
    "payable": 613.88,
    "original": 1233.89,
+   "tokens": 320359120499.0,
    "discount": 620.01
   },
   {
@@ -2795,6 +3073,7 @@
    "pretax": 27.32,
    "payable": 27.32,
    "original": 60.73,
+   "tokens": 107357615512.0,
    "discount": 33.41
   },
   {
@@ -2805,6 +3084,7 @@
    "pretax": 22486.88,
    "payable": 22486.88,
    "original": 46207.27,
+   "tokens": 355312905597.0,
    "discount": 23720.39
   },
   {
@@ -2815,6 +3095,7 @@
    "pretax": 6233.76,
    "payable": 6233.76,
    "original": 12697.5,
+   "tokens": 355312899035.0,
    "discount": 6463.74
   },
   {
@@ -2825,6 +3106,7 @@
    "pretax": 0.16,
    "payable": 0.16,
    "original": 0.19,
+   "tokens": 28192531.0,
    "discount": 0.03
   },
   {
@@ -2835,6 +3117,7 @@
    "pretax": 16.7,
    "payable": 16.7,
    "original": 42.08,
+   "tokens": 29047636.0,
    "discount": 25.38
   },
   {
@@ -2845,6 +3128,7 @@
    "pretax": 239.98,
    "payable": 239.98,
    "original": 499.09,
+   "tokens": 645865198005.0,
    "discount": 259.11
   },
   {
@@ -2855,6 +3139,7 @@
    "pretax": 91.95,
    "payable": 91.95,
    "original": 92.41,
+   "tokens": 1772448151.0,
    "discount": 0.46
   },
   {
@@ -2865,6 +3150,7 @@
    "pretax": 0.03,
    "payable": 0.03,
    "original": 0.09,
+   "tokens": 5464895114.0,
    "discount": 0.06
   },
   {
@@ -2875,6 +3161,7 @@
    "pretax": 98.41,
    "payable": 98.41,
    "original": 98.71,
+   "tokens": 451381800.0,
    "discount": 0.3
   },
   {
@@ -2885,6 +3172,7 @@
    "pretax": 1.52,
    "payable": 1.52,
    "original": 6.9,
+   "tokens": 22268578571.0,
    "discount": 5.38
   },
   {
@@ -2895,6 +3183,7 @@
    "pretax": 11.57,
    "payable": 11.57,
    "original": 18.0,
+   "tokens": 53507774545.0,
    "discount": 6.43
   },
   {
@@ -2905,6 +3194,7 @@
    "pretax": 15.33,
    "payable": 15.33,
    "original": 28.81,
+   "tokens": 81574906039.0,
    "discount": 13.48
   },
   {
@@ -2915,6 +3205,7 @@
    "pretax": 361.35,
    "payable": 361.35,
    "original": 706.8,
+   "tokens": 179207141336.0,
    "discount": 345.45
   },
   {
@@ -2925,6 +3216,7 @@
    "pretax": 12528.82,
    "payable": 12528.82,
    "original": 25931.36,
+   "tokens": 179207141336.0,
    "discount": 13402.54
   },
   {
@@ -2935,6 +3227,7 @@
    "pretax": 3088.73,
    "payable": 3088.73,
    "original": 6798.59,
+   "tokens": 179207141336.0,
    "discount": 3709.86
   },
   {
@@ -2945,6 +3238,7 @@
    "pretax": 0.35,
    "payable": 0.35,
    "original": 0.48,
+   "tokens": 181637577.0,
    "discount": 0.13
   },
   {
@@ -2955,6 +3249,7 @@
    "pretax": 88.43,
    "payable": 88.43,
    "original": 184.2,
+   "tokens": 207901809067.0,
    "discount": 95.77
   },
   {
@@ -2965,6 +3260,7 @@
    "pretax": 65.38,
    "payable": 65.38,
    "original": 65.41,
+   "tokens": 906099971.0,
    "discount": 0.03
   }
  ],
@@ -2976,6 +3272,7 @@
    "payable": 67696.3,
    "original": 140483.46,
    "discount": 72787.16,
+   "tokens": 966939215506.0,
    "days": 5
   },
   {
@@ -2985,6 +3282,7 @@
    "payable": 37998.4,
    "original": 76102.54,
    "discount": 38104.14,
+   "tokens": 1540062961188.0,
    "days": 16
   },
   {
@@ -2994,6 +3292,7 @@
    "payable": 19569.15,
    "original": 39030.48,
    "discount": 19461.33,
+   "tokens": 2856344783526.0,
    "days": 36
   },
   {
@@ -3003,6 +3302,7 @@
    "payable": 9671.93,
    "original": 20847.5,
    "discount": 11175.57,
+   "tokens": 608516922906.0,
    "days": 7
   },
   {
@@ -3012,6 +3312,7 @@
    "payable": 993.71,
    "original": 1975.77,
    "discount": 982.06,
+   "tokens": 585531430324.0,
    "days": 4
   },
   {
@@ -3021,6 +3322,7 @@
    "payable": 494.54,
    "original": 495.34,
    "discount": 0.8,
+   "tokens": 2294403236.0,
    "days": 4
   },
   {
@@ -3030,6 +3332,7 @@
    "payable": 226.66,
    "original": 374.94,
    "discount": 148.28,
+   "tokens": 657797284289.0,
    "days": 9
   },
   {
@@ -3039,6 +3342,7 @@
    "payable": 139.2,
    "original": 194.46,
    "discount": 55.26,
+   "tokens": 1899801000.0,
    "days": 6
   },
   {
@@ -3048,6 +3352,7 @@
    "payable": 53.23,
    "original": 98.12,
    "discount": 44.89,
+   "tokens": 269989158301.0,
    "days": 2
   },
   {
@@ -3057,6 +3362,7 @@
    "payable": 44.78,
    "original": 75.02,
    "discount": 30.24,
+   "tokens": 107794479.0,
    "days": 2
   },
   {
@@ -3066,6 +3372,7 @@
    "payable": 42.06,
    "original": 91.36,
    "discount": 49.3,
+   "tokens": 224985651498.0,
    "days": 14
   },
   {
@@ -3075,6 +3382,7 @@
    "payable": 0.03,
    "original": 0.09,
    "discount": 0.06,
+   "tokens": 5467895114.0,
    "days": 5
   },
   {
@@ -3084,6 +3392,7 @@
    "payable": 0.02,
    "original": 0.11,
    "discount": 0.09,
+   "tokens": 1440997582.0,
    "days": 5
   }
  ],
@@ -3094,6 +3403,7 @@
    "payable": 0.0,
    "original": 0.0,
    "discount": 0.0,
+   "tokens": 1500000.0,
    "projects": 1
   },
   {
@@ -3102,6 +3412,7 @@
    "payable": 1.21,
    "original": 3.24,
    "discount": 2.03,
+   "tokens": 10616313.0,
    "projects": 1
   },
   {
@@ -3110,6 +3421,7 @@
    "payable": 1.84,
    "original": 4.26,
    "discount": 2.42,
+   "tokens": 25232200.0,
    "projects": 1
   },
   {
@@ -3118,6 +3430,7 @@
    "payable": 1.13,
    "original": 2.65,
    "discount": 1.52,
+   "tokens": 16955757.0,
    "projects": 1
   },
   {
@@ -3126,6 +3439,7 @@
    "payable": 5.55,
    "original": 11.93,
    "discount": 6.38,
+   "tokens": 57736530.0,
    "projects": 1
   },
   {
@@ -3134,6 +3448,7 @@
    "payable": 3.84,
    "original": 8.77,
    "discount": 4.93,
+   "tokens": 53238292.0,
    "projects": 1
   },
   {
@@ -3142,6 +3457,7 @@
    "payable": 46.55,
    "original": 77.81,
    "discount": 31.26,
+   "tokens": 148742615.0,
    "projects": 3
   },
   {
@@ -3150,6 +3466,7 @@
    "payable": 25.23,
    "original": 54.13,
    "discount": 28.9,
+   "tokens": 260122529.0,
    "projects": 2
   },
   {
@@ -3158,6 +3475,7 @@
    "payable": 49.67,
    "original": 122.91,
    "discount": 73.24,
+   "tokens": 157964923.0,
    "projects": 1
   },
   {
@@ -3166,6 +3484,7 @@
    "payable": 3.94,
    "original": 9.85,
    "discount": 5.91,
+   "tokens": 23281706.0,
    "projects": 1
   },
   {
@@ -3174,6 +3493,7 @@
    "payable": 4.35,
    "original": 9.28,
    "discount": 4.93,
+   "tokens": 103347389.0,
    "projects": 1
   },
   {
@@ -3182,6 +3502,7 @@
    "payable": 55.69,
    "original": 135.14,
    "discount": 79.45,
+   "tokens": 216742653.0,
    "projects": 1
   },
   {
@@ -3190,6 +3511,7 @@
    "payable": 46.78,
    "original": 115.42,
    "discount": 68.64,
+   "tokens": 175410753.0,
    "projects": 2
   },
   {
@@ -3198,6 +3520,7 @@
    "payable": 309.86,
    "original": 528.07,
    "discount": 218.21,
+   "tokens": 3312574728.0,
    "projects": 2
   },
   {
@@ -3206,6 +3529,7 @@
    "payable": 458.45,
    "original": 927.58,
    "discount": 469.13,
+   "tokens": 10479027021.0,
    "projects": 1
   },
   {
@@ -3214,6 +3538,7 @@
    "payable": 409.12,
    "original": 848.52,
    "discount": 439.4,
+   "tokens": 8898576866.0,
    "projects": 1
   },
   {
@@ -3222,6 +3547,7 @@
    "payable": 512.82,
    "original": 1061.07,
    "discount": 548.25,
+   "tokens": 15051853164.0,
    "projects": 2
   },
   {
@@ -3230,6 +3556,7 @@
    "payable": 853.36,
    "original": 1718.32,
    "discount": 864.96,
+   "tokens": 29799347961.0,
    "projects": 1
   },
   {
@@ -3238,6 +3565,7 @@
    "payable": 897.96,
    "original": 1806.35,
    "discount": 908.39,
+   "tokens": 23220723040.0,
    "projects": 1
   },
   {
@@ -3246,6 +3574,7 @@
    "payable": 1336.6,
    "original": 2671.26,
    "discount": 1334.66,
+   "tokens": 34009796609.0,
    "projects": 1
   },
   {
@@ -3254,6 +3583,7 @@
    "payable": 910.42,
    "original": 1803.47,
    "discount": 893.05,
+   "tokens": 23739425286.0,
    "projects": 1
   },
   {
@@ -3262,6 +3592,7 @@
    "payable": 2496.79,
    "original": 4972.63,
    "discount": 2475.84,
+   "tokens": 86774534796.0,
    "projects": 4
   },
   {
@@ -3270,6 +3601,7 @@
    "payable": 3004.72,
    "original": 5863.32,
    "discount": 2858.6,
+   "tokens": 120644619258.0,
    "projects": 3
   },
   {
@@ -3278,6 +3610,7 @@
    "payable": 1706.48,
    "original": 3385.31,
    "discount": 1678.83,
+   "tokens": 93941296051.0,
    "projects": 4
   },
   {
@@ -3286,6 +3619,7 @@
    "payable": 1319.11,
    "original": 2542.77,
    "discount": 1223.66,
+   "tokens": 79365908483.0,
    "projects": 3
   },
   {
@@ -3294,6 +3628,7 @@
    "payable": 2898.82,
    "original": 5549.79,
    "discount": 2650.97,
+   "tokens": 124063534323.0,
    "projects": 5
   },
   {
@@ -3302,6 +3637,7 @@
    "payable": 3912.25,
    "original": 7605.82,
    "discount": 3693.57,
+   "tokens": 145636169759.0,
    "projects": 4
   },
   {
@@ -3310,6 +3646,7 @@
    "payable": 5270.66,
    "original": 10936.85,
    "discount": 5666.19,
+   "tokens": 155896719048.0,
    "projects": 3
   },
   {
@@ -3318,6 +3655,7 @@
    "payable": 5524.87,
    "original": 11357.85,
    "discount": 5832.98,
+   "tokens": 208684559487.0,
    "projects": 5
   },
   {
@@ -3326,6 +3664,7 @@
    "payable": 2783.83,
    "original": 5474.95,
    "discount": 2691.12,
+   "tokens": 131575793125.0,
    "projects": 6
   },
   {
@@ -3334,6 +3673,7 @@
    "payable": 2350.2,
    "original": 4732.14,
    "discount": 2381.94,
+   "tokens": 175281634833.0,
    "projects": 6
   },
   {
@@ -3342,6 +3682,7 @@
    "payable": 2792.73,
    "original": 5766.29,
    "discount": 2973.56,
+   "tokens": 170531864376.0,
    "projects": 5
   },
   {
@@ -3350,6 +3691,7 @@
    "payable": 8275.29,
    "original": 16982.12,
    "discount": 8706.83,
+   "tokens": 426724709432.0,
    "projects": 6
   },
   {
@@ -3358,6 +3700,7 @@
    "payable": 15523.37,
    "original": 31966.01,
    "discount": 16442.64,
+   "tokens": 987621829992.0,
    "projects": 8
   },
   {
@@ -3366,6 +3709,7 @@
    "payable": 26834.39,
    "original": 55640.68,
    "discount": 28806.29,
+   "tokens": 1558563759324.0,
    "projects": 8
   },
   {
@@ -3374,6 +3718,7 @@
    "payable": 30042.21,
    "original": 61233.29,
    "discount": 31191.08,
+   "tokens": 2196430643635.0,
    "projects": 9
   },
   {
@@ -3382,6 +3727,7 @@
    "payable": 16259.92,
    "original": 33839.34,
    "discount": 17579.42,
+   "tokens": 909878506692.0,
    "projects": 9
   }
  ],
@@ -3391,6 +3737,7 @@
    "pretax": 1936.03,
    "original": 3920.63,
    "discount": 1984.6,
+   "tokens": 38992923439.0,
    "projectCount": 4,
    "dayCount": 17,
    "byProject": {
@@ -3405,6 +3752,7 @@
    "pretax": 134993.98,
    "original": 275848.56,
    "discount": 140854.58,
+   "tokens": 7682385375510.0,
    "projectCount": 12,
    "dayCount": 20,
    "byProject": {

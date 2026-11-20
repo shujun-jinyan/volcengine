@@ -36,7 +36,7 @@ h1{font-size:22px;margin:0;letter-spacing:.2px}
 .pill{display:inline-flex;align-items:center;gap:6px;background:#eef3ff;color:#2f5cd8;
   border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
-.grid-kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}
+.grid-kpi{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 .kpi{padding:16px 18px}
 .kpi .label{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:6px}
@@ -83,6 +83,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
   padding:7px 14px;border-radius:9px;cursor:pointer}
 .tab.active{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(16,24,40,.08)}
 .kpi .up{color:var(--red)} .kpi .down{color:var(--green)}
+@media(max-width:1200px){.grid-kpi{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:960px){.grid-kpi{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){body{padding:16px 12px 40px}.kpi .val{font-size:22px}.section{padding:14px}}
 @media print{body{background:#fff;padding:0}.btn,.toolbar,.tabs{display:none}.card{box-shadow:none}}
@@ -122,6 +123,11 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
       <div class="hint">原价 − 税前应付</div>
     </div>
     <div class="card kpi">
+      <div class="label">Token 总用量</div>
+      <div class="val" id="kpiTokens">—<small>tokens</small></div>
+      <div class="hint">按计费单位换算</div>
+    </div>
+    <div class="card kpi">
       <div class="label">参与项目数</div>
       <div class="val" id="kpiProjects">—<small>个</small></div>
       <div class="hint">含未归属项目</div>
@@ -140,7 +146,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
         <label>项目</label>
         <select id="fProject"></select>
         <label>口径</label>
-        <select id="fMetric"><option value="pretax">税前应付</option><option value="payable">应付金额</option></select>
+        <select id="fMetric"><option value="pretax">税前应付</option><option value="payable">应付金额</option><option value="tokens">Token 用量</option></select>
       </div>
     </div>
     <svg class="chart" id="chart" viewBox="0 0 1100 300" preserveAspectRatio="none"></svg>
@@ -162,9 +168,29 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
           <th class="num" data-k="original">原价金额(元)</th>
           <th class="num" data-k="discount">优惠金额(元)</th>
           <th class="num" data-k="pretax">消费金额(元)</th>
+          <th class="num" data-k="tokens">Token 用量</th>
           <th class="num" data-k="share">占比</th>
           <th class="num" data-k="days">消费天数</th>
           <th class="num" data-k="avg">日均(元)</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card section">
+    <div class="section-head">
+      <div class="section-title">模型用量统计<span>按 Token 用量排序</span></div>
+      <div class="toolbar">
+        <label>月份</label>
+        <select id="fMonth4"></select>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table id="modelTable">
+        <thead><tr>
+          <th>模型</th><th class="num">Token 用量</th><th class="num">占比</th>
+          <th class="num">消费金额(元)</th><th class="num">原价金额(元)</th><th class="num">涉及项目</th>
         </tr></thead>
         <tbody></tbody>
       </table>
@@ -187,6 +213,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
           <th>日期</th><th>项目名称</th><th>项目标识</th>
           <th class="num">原价金额(元)</th><th class="num">优惠金额(元)</th>
           <th class="num">消费金额(元)</th><th class="num">应付金额(元)</th>
+          <th class="num">Token 用量</th>
           <th>备注</th>
         </tr></thead>
         <tbody></tbody>
@@ -211,6 +238,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
 
   <footer>
     数据口径：分账明细（ListSplitBillDetail，按天 × 项目）。消费金额 = 税前应付(PretaxAmount)；原价 = 刊例价(OriginalBillAmount)；优惠金额 = 原价 − 税前应付。<br>
+    Token 用量由账单 Count 按计费单位换算（千tokens × 1000）；账单不提供 API 请求次数，调用次数请在火山方舟控制台「用量统计」查看。<br>
     分账明细存在 T+2 延迟，当日及前一日数据可能仍在滚动更新；请以火山引擎账单中心最终账单为准。
   </footer>
 </div>
@@ -220,6 +248,13 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
 const DATA = JSON.parse(document.getElementById('ledger-data').textContent);
 const fmt = n => (n||0).toLocaleString('zh-CN',{minimumFractionDigits:2, maximumFractionDigits:2});
 const fmtShort = n => Math.abs(n)>=10000 ? (n/10000).toFixed(2)+'万' : fmt(n);
+const fmtTok = n => {
+  if(!n) return '0';
+  if(Math.abs(n)>=1e12) return (n/1e12).toFixed(2)+' 万亿';
+  if(Math.abs(n)>=1e8) return (n/1e8).toFixed(2)+' 亿';
+  if(Math.abs(n)>=1e4) return (n/1e4).toFixed(1)+' 万';
+  return Math.round(n).toLocaleString();
+};
 const $ = s => document.querySelector(s);
 const state = { month:'all', project:'all', metric:'pretax', order:'name', sortK:'pretax', sortDir:-1 };
 
@@ -245,6 +280,7 @@ function projectsIn(m){
   $('#kpiTotal').innerHTML = fmt(t)+'<small>元</small>';
   $('#kpiOriginal').innerHTML = fmt(orig)+'<small>元</small>';
   $('#kpiDiscount').innerHTML = fmt(DATA.totalDiscount)+'<small>元</small>';
+  $('#kpiTokens').innerHTML = fmtTok(DATA.totalTokens)+'<small>tokens</small>';
   $('#kpiProjects').innerHTML = DATA.projects.length+'<small>个</small>';
   const days = DATA.dates.length;
   $('#kpiAvg').innerHTML = fmt(t/Math.max(days,1))+'<small>元</small>';
@@ -254,11 +290,11 @@ function projectsIn(m){
 
 /* filters */
 const mSel = months();
-['#fMonth','#fMonth2','#fMonth3'].forEach(sel=>{
+['#fMonth','#fMonth2','#fMonth3','#fMonth4'].forEach(sel=>{
   const el=$(sel); el.innerHTML='<option value="all">全部月份</option>'+mSel.map(m=>`<option value="${m}">${m}</option>`).join('');
   el.addEventListener('change',()=>{
     state.month=el.value;
-    ['#fMonth','#fMonth2','#fMonth3'].forEach(s=>{ if($(s).value!==el.value) $(s).value=el.value; });
+    ['#fMonth','#fMonth2','#fMonth3','#fMonth4'].forEach(s=>{ if($(s).value!==el.value) $(s).value=el.value; });
     renderAll();
   });
 });
@@ -304,11 +340,14 @@ function renderChart(){
   const plotW=W-padL-padR, plotH=H-padT-padB;
   const bw=plotW/Math.max(dates.length,1);
   const barW=Math.max(2,Math.min(26,bw*0.62));
+  const isTok = state.metric==='tokens';
+  const fmtAxis = v => isTok ? fmtTok(v) : fmtShort(v);
+  const fmtTip = v => isTok ? fmtTok(v)+' tokens' : fmt(v)+' 元';
   let svg=`<g class="axis">`;
   for(let i=0;i<=4;i++){
     const y=padT+plotH*i/4, v=max*(1-i/4);
     svg+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#eef1f7"/>`;
-    svg+=`<text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="#98a2b3">${fmtShort(v)}</text>`;
+    svg+=`<text x="${padL-8}" y="${y+4}" text-anchor="end" font-size="10" fill="#98a2b3">${fmtAxis(v)}</text>`;
   }
   svg+=`</g>`;
   dates.forEach((d,di)=>{
@@ -320,7 +359,7 @@ function renderChart(){
       const v=segs[pid]||0; if(v<=0) return;
       const h=v/max*plotH; y-=h;
       const color = pid==='__other' ? '#cbd5e1' : colorFor(pid);
-      svg+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${h.toFixed(1)}" fill="${color}" rx="2"><title>${d} · ${pid==='__other'?'其他项目':projById[pid].name}：${fmt(v)} 元</title></rect>`;
+      svg+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${h.toFixed(1)}" fill="${color}" rx="2"><title>${d} · ${pid==='__other'?'其他项目':projById[pid].name}：${fmtTip(v)}</title></rect>`;
     });
     if(dates.length<=20 || di%Math.ceil(dates.length/14)===0){
       svg+=`<text x="${(x+barW/2).toFixed(1)}" y="${H-12}" text-anchor="middle" font-size="10" fill="#98a2b3">${d.slice(5)}</text>`;
@@ -336,8 +375,8 @@ function renderProjects(){
   const cells=monthCells(m);
   const map={};
   cells.forEach(c=>{
-    const o=map[c.project] || (map[c.project]={id:c.project,name:c.projectName,pretax:0,payable:0,original:0,discount:0,dates:new Set()});
-    o.pretax+=c.pretax; o.payable+=c.payable; o.original+=c.original; o.discount+=c.discount;
+    const o=map[c.project] || (map[c.project]={id:c.project,name:c.projectName,pretax:0,payable:0,original:0,discount:0,tokens:0,dates:new Set()});
+    o.pretax+=c.pretax; o.payable+=c.payable; o.original+=c.original; o.discount+=c.discount; o.tokens+=c.tokens;
     o.dates.add(c.date);
     o.name=c.projectName;
   });
@@ -355,10 +394,11 @@ function renderProjects(){
     <td class="num">${fmt(r.original)}</td>
     <td class="num" style="color:#0f9f6e">${fmt(r.discount)}</td>
     <td class="num" style="font-weight:700">${fmt(r.pretax)}</td>
+    <td class="num">${fmtTok(r.tokens)}</td>
     <td class="num"><div class="share"><div class="bar"><i style="width:${Math.min(r.share,100)}%;background:${colorFor(r.id)}"></i></div><span>${r.share.toFixed(1)}%</span></div></td>
     <td class="num">${r.days}</td>
     <td class="num">${fmt(r.avg)}</td>
-  </tr>`).join('') || `<tr><td colspan="8" class="empty">暂无数据</td></tr>`;
+  </tr>`).join('') || `<tr><td colspan="9" class="empty">暂无数据</td></tr>`;
 }
 
 /* ledger detail */
@@ -381,8 +421,9 @@ function renderLedger(){
     <td class="num" style="color:#0f9f6e">${fmt(c.discount)}</td>
     <td class="num" style="font-weight:600">${fmt(c.pretax)}</td>
     <td class="num">${fmt(c.payable)}</td>
+    <td class="num">${fmtTok(c.tokens)}</td>
     <td><input class="note-input" data-k="${c.date}|${c.project}" value="${(notes[c.date+'|'+c.project]||'').replace(/"/g,'&quot;')}" placeholder="填写备注"></td>
-  </tr>`).join('') || `<tr><td colspan="8" class="empty">没有匹配的记录</td></tr>`;
+  </tr>`).join('') || `<tr><td colspan="9" class="empty">没有匹配的记录</td></tr>`;
   tb.querySelectorAll('.note-input').forEach(inp=>{
     inp.addEventListener('change',()=>{
       const n=getNotes(); const v=inp.value.trim();
@@ -417,16 +458,39 @@ function renderMatrix(){
   }).join('') || `<tr><td class="empty" colspan="3">暂无数据</td></tr>`;
 }
 
-function renderAll(){ renderChart(); renderProjects(); renderLedger(); renderMatrix(); }
+/* model usage */
+function renderModels(){
+  const m=state.month;
+  const map={};
+  DATA.models.filter(x=>m==='all'||x.date.startsWith(m)).forEach(x=>{
+    const o=map[x.model] || (map[x.model]={model:x.model,tokens:0,pretax:0,original:0,projects:new Set()});
+    o.tokens+=x.tokens; o.pretax+=x.pretax; o.original+=x.original; o.projects.add(x.project);
+  });
+  const rows=Object.values(map).sort((a,b)=>b.tokens-a.tokens);
+  const total=rows.reduce((a,r)=>a+r.tokens,0);
+  $('#modelTable tbody').innerHTML=rows.map(r=>{
+    const share=r.tokens/Math.max(total,1)*100;
+    return `<tr>
+      <td style="font-weight:600">${r.model}</td>
+      <td class="num" style="font-weight:600">${fmtTok(r.tokens)}</td>
+      <td class="num"><div class="share"><div class="bar"><i style="width:${Math.min(share,100)}%"></i></div><span>${share.toFixed(1)}%</span></div></td>
+      <td class="num">${fmt(r.pretax)}</td>
+      <td class="num">${fmt(r.original)}</td>
+      <td class="num">${r.projects.size}</td>
+    </tr>`;
+  }).join('') || `<tr><td colspan="6" class="empty">暂无数据</td></tr>`;
+}
+
+function renderAll(){ renderChart(); renderProjects(); renderModels(); renderLedger(); renderMatrix(); }
 
 /* CSV export */
 $('#btnCsv').addEventListener('click',()=>{
   const notes=getNotes();
-  const rows=[['日期','项目名称','项目标识','原价金额(元)','优惠金额(元)','消费金额(元)','应付金额(元)','备注']];
+  const rows=[['日期','项目名称','项目标识','原价金额(元)','优惠金额(元)','消费金额(元)','应付金额(元)','Token 用量','备注']];
   const m=state.month;
   DATA.cells.filter(c=>m==='all'||c.date.startsWith(m))
     .sort((a,b)=>a.date.localeCompare(b.date)||a.project.localeCompare(b.project))
-    .forEach(c=>rows.push([c.date,c.projectName,c.project,c.original.toFixed(2),c.discount.toFixed(2),c.pretax.toFixed(2),c.payable.toFixed(2),notes[c.date+'|'+c.project]||'']));
+    .forEach(c=>rows.push([c.date,c.projectName,c.project,c.original.toFixed(2),c.discount.toFixed(2),c.pretax.toFixed(2),c.payable.toFixed(2),Math.round(c.tokens),notes[c.date+'|'+c.project]||'']));
   const csv='\uFEFF'+rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(',')).join('\r\n');
   const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
   const a=document.createElement('a');
