@@ -80,29 +80,38 @@ def aggregate(rows):
         dates.add(d)
         projects.setdefault(proj, {"id": proj, "name": pname})
         c = cells.setdefault(f"{d}|{proj}", {"date": d, "project": proj, "projectName": pname,
-                                             "pretax": 0.0, "payable": 0.0, "rows": 0})
+                                             "pretax": 0.0, "payable": 0.0,
+                                             "original": 0.0, "rows": 0})
         c["pretax"] += num(r.get("PretaxAmount"))
         c["payable"] += num(r.get("PayableAmount"))
+        c["original"] += num(r.get("OriginalBillAmount"))
         c["rows"] += 1
         m = r.get("ConfigName") or r.get("ConfigurationCode") or "-"
         mk = f"{d}|{proj}|{m}"
         mc = model_cells.setdefault(mk, {"date": d, "project": proj, "projectName": pname,
-                                         "model": m, "pretax": 0.0, "payable": 0.0})
+                                         "model": m, "pretax": 0.0, "payable": 0.0,
+                                         "original": 0.0})
         mc["pretax"] += num(r.get("PretaxAmount"))
         mc["payable"] += num(r.get("PayableAmount"))
+        mc["original"] += num(r.get("OriginalBillAmount"))
 
     cells = [c for c in cells.values()]
     for c in cells:
         c["pretax"] = round(c["pretax"], 2)
         c["payable"] = round(c["payable"], 2)
+        c["original"] = round(c["original"], 2)
+        c["discount"] = round(c["original"] - c["pretax"], 2)
     model_cells = [m for m in model_cells.values()]
     for m in model_cells:
         m["pretax"] = round(m["pretax"], 2)
         m["payable"] = round(m["payable"], 2)
+        m["original"] = round(m["original"], 2)
+        m["discount"] = round(m["original"] - m["pretax"], 2)
 
     dates = sorted(dates)
     proj_list = sorted(projects.values(), key=lambda p: p["name"])
     total_pretax = round(sum(c["pretax"] for c in cells), 2)
+    total_original = round(sum(c["original"] for c in cells), 2)
     per_project = []
     for p in proj_list:
         vals = [c for c in cells if c["project"] == p["id"]]
@@ -110,6 +119,8 @@ def aggregate(rows):
             **p,
             "pretax": round(sum(v["pretax"] for v in vals), 2),
             "payable": round(sum(v["payable"] for v in vals), 2),
+            "original": round(sum(v["original"] for v in vals), 2),
+            "discount": round(sum(v["discount"] for v in vals), 2),
             "days": len({v["date"] for v in vals}),
         })
     per_project.sort(key=lambda p: -p["pretax"])
@@ -118,15 +129,19 @@ def aggregate(rows):
         vals = [c for c in cells if c["date"] == d]
         per_date.append({"date": d, "pretax": round(sum(v["pretax"] for v in vals), 2),
                          "payable": round(sum(v["payable"] for v in vals), 2),
+                         "original": round(sum(v["original"] for v in vals), 2),
+                         "discount": round(sum(v["discount"] for v in vals), 2),
                          "projects": len(vals)})
     return {
         "generatedAt": datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S"),
         "currency": "CNY",
         "source": "火山引擎账单中心 · 分账明细（ListSplitBillDetail，按天×项目）",
-        "note": "分账明细存在 T+2 延迟；当日数据可能仍在滚动更新。金额为税前应付（PretaxAmount）。",
+        "note": "分账明细存在 T+2 延迟；当日数据可能仍在滚动更新。消费金额=税前应付(PretaxAmount)，原价=刊例价(OriginalBillAmount)，优惠=原价-税前应付。",
         "periods": MONTHS,
         "dateRange": {"start": dates[0] if dates else "", "end": dates[-1] if dates else ""},
         "totalPretax": total_pretax,
+        "totalOriginal": total_original,
+        "totalDiscount": round(total_original - total_pretax, 2),
         "cells": sorted(cells, key=lambda c: (c["date"], c["project"])),
         "models": sorted(model_cells, key=lambda m: (m["date"], m["project"], m["model"])),
         "projects": per_project,
@@ -139,9 +154,11 @@ def monthly_summary(cells):
     out = {}
     for c in cells:
         m = c["date"][:7]
-        o = out.setdefault(m, {"month": m, "pretax": 0.0, "projects": set(), "days": set(),
-                               "byProject": {}})
+        o = out.setdefault(m, {"month": m, "pretax": 0.0, "original": 0.0, "discount": 0.0,
+                               "projects": set(), "days": set(), "byProject": {}})
         o["pretax"] += c["pretax"]
+        o["original"] += c["original"]
+        o["discount"] += c["discount"]
         o["projects"].add(c["project"])
         o["days"].add(c["date"])
         o["byProject"][c["project"]] = o["byProject"].get(c["project"], 0) + c["pretax"]
@@ -149,6 +166,8 @@ def monthly_summary(cells):
     for m in sorted(out):
         o = out[m]
         res.append({"month": m, "pretax": round(o["pretax"], 2),
+                    "original": round(o["original"], 2),
+                    "discount": round(o["discount"], 2),
                     "projectCount": len(o["projects"]), "dayCount": len(o["days"]),
                     "byProject": {k: round(v, 2) for k, v in o["byProject"].items()}})
     return res

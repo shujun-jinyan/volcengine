@@ -36,7 +36,7 @@ h1{font-size:22px;margin:0;letter-spacing:.2px}
 .pill{display:inline-flex;align-items:center;gap:6px;background:#eef3ff;color:#2f5cd8;
   border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
-.grid-kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+.grid-kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 .kpi{padding:16px 18px}
 .kpi .label{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:6px}
@@ -107,9 +107,19 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
 
   <div class="grid-kpi">
     <div class="card kpi">
-      <div class="label">统计周期累计消费</div>
+      <div class="label">累计消费（税前应付）</div>
       <div class="val" id="kpiTotal">—<small>元</small></div>
       <div class="hint" id="kpiRange"></div>
+    </div>
+    <div class="card kpi">
+      <div class="label">原价合计（刊例价）</div>
+      <div class="val" id="kpiOriginal">—<small>元</small></div>
+      <div class="hint">按 OriginalBillAmount 统计</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">优惠金额</div>
+      <div class="val" id="kpiDiscount">—<small>元</small></div>
+      <div class="hint">原价 − 税前应付</div>
     </div>
     <div class="card kpi">
       <div class="label">参与项目数</div>
@@ -120,11 +130,6 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
       <div class="label">日均消费</div>
       <div class="val" id="kpiAvg">—<small>元</small></div>
       <div class="hint">按有消费日期计算</div>
-    </div>
-    <div class="card kpi">
-      <div class="label">最新一日消费</div>
-      <div class="val" id="kpiLatest">—<small>元</small></div>
-      <div class="hint" id="kpiLatestDate"></div>
     </div>
   </div>
 
@@ -154,6 +159,8 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
       <table id="projTable">
         <thead><tr>
           <th data-k="name">项目名称</th><th data-k="id">项目标识</th>
+          <th class="num" data-k="original">原价金额(元)</th>
+          <th class="num" data-k="discount">优惠金额(元)</th>
           <th class="num" data-k="pretax">消费金额(元)</th>
           <th class="num" data-k="share">占比</th>
           <th class="num" data-k="days">消费天数</th>
@@ -178,6 +185,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
       <table id="ledgerTable">
         <thead><tr>
           <th>日期</th><th>项目名称</th><th>项目标识</th>
+          <th class="num">原价金额(元)</th><th class="num">优惠金额(元)</th>
           <th class="num">消费金额(元)</th><th class="num">应付金额(元)</th>
           <th>备注</th>
         </tr></thead>
@@ -202,7 +210,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
   </div>
 
   <footer>
-    数据口径：分账明细（ListSplitBillDetail，按天 × 项目），金额为税前应付（PretaxAmount）。<br>
+    数据口径：分账明细（ListSplitBillDetail，按天 × 项目）。消费金额 = 税前应付(PretaxAmount)；原价 = 刊例价(OriginalBillAmount)；优惠金额 = 原价 − 税前应付。<br>
     分账明细存在 T+2 延迟，当日及前一日数据可能仍在滚动更新；请以火山引擎账单中心最终账单为准。
   </footer>
 </div>
@@ -233,15 +241,15 @@ function projectsIn(m){
 /* KPI */
 (function(){
   const t = DATA.totalPretax;
+  const orig = DATA.totalOriginal;
   $('#kpiTotal').innerHTML = fmt(t)+'<small>元</small>';
+  $('#kpiOriginal').innerHTML = fmt(orig)+'<small>元</small>';
+  $('#kpiDiscount').innerHTML = fmt(DATA.totalDiscount)+'<small>元</small>';
   $('#kpiProjects').innerHTML = DATA.projects.length+'<small>个</small>';
   const days = DATA.dates.length;
   $('#kpiAvg').innerHTML = fmt(t/Math.max(days,1))+'<small>元</small>';
   const last = DATA.dates[DATA.dates.length-1];
-  if(last){
-    $('#kpiLatest').innerHTML = fmt(last.pretax)+'<small>元</small>';
-    $('#kpiLatestDate').textContent = last.date + ' · ' + last.projects + ' 个项目';
-  }
+  if(last) $('#kpiRange').textContent = DATA.dateRange.start + ' 至 ' + DATA.dateRange.end;
 })();
 
 /* filters */
@@ -325,20 +333,32 @@ function renderChart(){
 /* project summary */
 function renderProjects(){
   const m=state.month;
-  let rows=projectsIn(m).map(p=>{
-    const share=p.pretax/Math.max(monthCells(m).reduce((a,c)=>a+c.pretax,0),0.0001)*100;
-    return {id:p.id,name:p.name,pretax:p.pretax,share,days:p.days,avg:p.pretax/Math.max(p.days,1)};
+  const cells=monthCells(m);
+  const map={};
+  cells.forEach(c=>{
+    const o=map[c.project] || (map[c.project]={id:c.project,name:c.projectName,pretax:0,payable:0,original:0,discount:0,dates:new Set()});
+    o.pretax+=c.pretax; o.payable+=c.payable; o.original+=c.original; o.discount+=c.discount;
+    o.dates.add(c.date);
+    o.name=c.projectName;
   });
+  const total=cells.reduce((a,c)=>a+c.pretax,0);
+  let rows=Object.values(map).map(r=>({
+    ...r, dates:undefined, days:r.dates.size,
+    share:r.pretax/Math.max(total,0.0001)*100,
+    avg:r.pretax/Math.max(r.dates.size,1)
+  }));
   const k=state.sortK,d=state.sortDir;
   rows.sort((a,b)=> typeof a[k]==='number' ? (a[k]-b[k])*d : String(a[k]).localeCompare(String(b[k]),'zh')*d);
   $('#projTable tbody').innerHTML=rows.map(r=>`<tr>
     <td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${colorFor(r.id)};margin-right:8px"></span>${r.name}</td>
     <td><span class="tag">${r.id}</span></td>
+    <td class="num">${fmt(r.original)}</td>
+    <td class="num" style="color:#0f9f6e">${fmt(r.discount)}</td>
     <td class="num" style="font-weight:700">${fmt(r.pretax)}</td>
     <td class="num"><div class="share"><div class="bar"><i style="width:${Math.min(r.share,100)}%;background:${colorFor(r.id)}"></i></div><span>${r.share.toFixed(1)}%</span></div></td>
     <td class="num">${r.days}</td>
     <td class="num">${fmt(r.avg)}</td>
-  </tr>`).join('') || `<tr><td colspan="6" class="empty">暂无数据</td></tr>`;
+  </tr>`).join('') || `<tr><td colspan="8" class="empty">暂无数据</td></tr>`;
 }
 
 /* ledger detail */
@@ -357,10 +377,12 @@ function renderLedger(){
     <td>${c.date}</td>
     <td>${c.projectName}</td>
     <td><span class="tag">${c.project}</span></td>
+    <td class="num">${fmt(c.original)}</td>
+    <td class="num" style="color:#0f9f6e">${fmt(c.discount)}</td>
     <td class="num" style="font-weight:600">${fmt(c.pretax)}</td>
     <td class="num">${fmt(c.payable)}</td>
     <td><input class="note-input" data-k="${c.date}|${c.project}" value="${(notes[c.date+'|'+c.project]||'').replace(/"/g,'&quot;')}" placeholder="填写备注"></td>
-  </tr>`).join('') || `<tr><td colspan="6" class="empty">没有匹配的记录</td></tr>`;
+  </tr>`).join('') || `<tr><td colspan="8" class="empty">没有匹配的记录</td></tr>`;
   tb.querySelectorAll('.note-input').forEach(inp=>{
     inp.addEventListener('change',()=>{
       const n=getNotes(); const v=inp.value.trim();
@@ -400,11 +422,11 @@ function renderAll(){ renderChart(); renderProjects(); renderLedger(); renderMat
 /* CSV export */
 $('#btnCsv').addEventListener('click',()=>{
   const notes=getNotes();
-  const rows=[['日期','项目名称','项目标识','消费金额(元)','应付金额(元)','备注']];
+  const rows=[['日期','项目名称','项目标识','原价金额(元)','优惠金额(元)','消费金额(元)','应付金额(元)','备注']];
   const m=state.month;
   DATA.cells.filter(c=>m==='all'||c.date.startsWith(m))
     .sort((a,b)=>a.date.localeCompare(b.date)||a.project.localeCompare(b.project))
-    .forEach(c=>rows.push([c.date,c.projectName,c.project,c.pretax.toFixed(2),c.payable.toFixed(2),notes[c.date+'|'+c.project]||'']));
+    .forEach(c=>rows.push([c.date,c.projectName,c.project,c.original.toFixed(2),c.discount.toFixed(2),c.pretax.toFixed(2),c.payable.toFixed(2),notes[c.date+'|'+c.project]||'']));
   const csv='\uFEFF'+rows.map(r=>r.map(x=>`"${String(x).replace(/"/g,'""')}"`).join(',')).join('\r\n');
   const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
   const a=document.createElement('a');

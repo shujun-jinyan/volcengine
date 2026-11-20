@@ -53,4 +53,8 @@ if [ -z "$DEP_ID" ]; then
 fi
 
 sh "$DEPLOY" deployments wait --deployment-id "$DEP_ID" | tail -1
+
+# 部署后保持"仅自己可见"，避免部署流程重置访问策略
+sh "$DEPLOY" sites update-config --site-id "$SITE_ID" --access-policy private >/dev/null 2>&1 || true
+
 rm -rf "$SRC"
