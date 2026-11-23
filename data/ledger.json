@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-23 16:03:11",
+ "generatedAt": "2026-11-23 16:08:35",
  "currency": "CNY",
  "source": "火山引擎账单中心 · 分账明细（ListSplitBillDetail，按天×项目）",
  "note": "分账明细存在 T+2 延迟；当日数据可能仍在滚动更新。消费金额=税前应付(PretaxAmount)，原价=刊例价(OriginalBillAmount)，优惠=原价-税前应付。",
@@ -4534,5 +4534,51 @@
     "zouxz-1022": 0.2
    }
   }
- ]
+ ],
+ "account": {
+  "total": 672169.84,
+  "payable": 672169.84,
+  "byProduct": [
+   {
+    "product": "auth_individual_source",
+    "name": "身份认证（有源认证）",
+    "pretax": 453284.62,
+    "payable": 453284.62
+   },
+   {
+    "product": "ark_open_source_llm",
+    "name": "开源LLM模型",
+    "pretax": 218726.22,
+    "payable": 218726.22
+   },
+   {
+    "product": "SearchInfinity",
+    "name": "融合信息搜索",
+    "pretax": 159.0,
+    "payable": 159.0
+   },
+   {
+    "product": "TOS",
+    "name": "对象存储",
+    "pretax": 0.0,
+    "payable": 0.0
+   },
+   {
+    "product": "agentidentity_ve",
+    "name": "智能体身份与权限管理平台（公有云）",
+    "pretax": 0.0,
+    "payable": 0.0
+   },
+   {
+    "product": "CC_content_plugin",
+    "name": "联网内容插件",
+    "pretax": 0.0,
+    "payable": 0.0
+   }
+  ],
+  "range": {
+   "start": "2026-10-15",
+   "end": "2026-11-23"
+  }
+ }
 }

@@ -36,7 +36,7 @@ h1{font-size:22px;margin:0;letter-spacing:.2px}
 .pill{display:inline-flex;align-items:center;gap:6px;background:#eef3ff;color:#2f5cd8;
   border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600}
 .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
-.grid-kpi{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:18px}
+.grid-kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
 .kpi{padding:16px 18px}
 .kpi .label{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:6px}
@@ -108,9 +108,19 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
 
   <div class="grid-kpi">
     <div class="card kpi">
-      <div class="label">累计消费（税前应付）</div>
+      <div class="label">方舟大模型消费（税前应付）</div>
       <div class="val" id="kpiTotal">—<small>元</small></div>
       <div class="hint" id="kpiRange"></div>
+    </div>
+    <div class="card kpi">
+      <div class="label">全账号消费（同区间）</div>
+      <div class="val" id="kpiAccount">—<small>元</small></div>
+      <div class="hint" id="kpiAccountHint">含身份认证等非方舟产品</div>
+    </div>
+    <div class="card kpi">
+      <div class="label">方舟占全账号</div>
+      <div class="val" id="kpiShare">—<small>%</small></div>
+      <div class="hint">方舟消费 ÷ 全账号消费</div>
     </div>
     <div class="card kpi">
       <div class="label">原价合计（刊例价）</div>
@@ -239,6 +249,7 @@ footer{margin-top:26px;color:#98a2b3;font-size:12px;line-height:1.8;text-align:c
   <footer>
     数据口径：分账明细（ListSplitBillDetail，按天 × 项目）。消费金额 = 税前应付(PretaxAmount)；原价 = 刊例价(OriginalBillAmount)；优惠金额 = 原价 − 税前应付。<br>
     Token 用量由账单 Count 按计费单位换算（千tokens × 1000）；账单不提供 API 请求次数，调用次数请在火山方舟控制台「用量统计」查看。<br>
+    「全账号消费」为同一日期区间内全部云产品（含身份认证、融合信息搜索等）的税前应付合计，来源同为分账明细。<br>
     分账明细存在 T+2 延迟，当日及前一日数据可能仍在滚动更新；请以火山引擎账单中心最终账单为准。
   </footer>
 </div>
@@ -286,6 +297,14 @@ function projectsIn(m){
   $('#kpiAvg').innerHTML = fmt(t/Math.max(days,1))+'<small>元</small>';
   const last = DATA.dates[DATA.dates.length-1];
   if(last) $('#kpiRange').textContent = DATA.dateRange.start + ' 至 ' + DATA.dateRange.end;
+  const acc = DATA.account || {total:0,byProduct:[]};
+  $('#kpiAccount').innerHTML = fmt(acc.total)+'<small>元</small>';
+  const others = (acc.byProduct||[]).filter(p=>!String(p.product).startsWith('ark_'));
+  if(others.length){
+    const top = others[0];
+    $('#kpiAccountHint').textContent = '含'+top.name+' '+fmt(top.pretax)+' 等';
+  }
+  if(acc.total>0) $('#kpiShare').innerHTML = (t/acc.total*100).toFixed(1)+'<small>%</small>';
 })();
 
 /* filters */

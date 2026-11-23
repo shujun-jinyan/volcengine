@@ -59,6 +59,52 @@ def fetch_month(month):
     return rows
 
 
+def fetch_account_month(month):
+    """拉取账号全产品分账明细（按天聚合），用于“全账号消费”口径。"""
+    rows, total, offset = [], None, 0
+    while True:
+        res = ve_call({
+            "BillPeriod": month,
+            "GroupPeriod": 1,
+            "Limit": PAGE,
+            "Offset": offset,
+            "NeedRecordNum": 1,
+        }).get("Result") or {}
+        batch = res.get("List") or []
+        if total is None:
+            total = res.get("Total", -1)
+        rows.extend(batch)
+        print(f"[account] {month} offset={offset} got={len(batch)} total={total}", file=sys.stderr)
+        if not batch or (isinstance(total, int) and total >= 0 and len(rows) >= total):
+            break
+        offset += PAGE
+        if offset > 30000:
+            break
+    return rows
+
+
+def account_summary(rows, date_range):
+    """按产品汇总同一日期区间的全账号消费。"""
+    start, end = date_range.get("start") or "", date_range.get("end") or ""
+    agg = {}
+    for r in rows:
+        d = r.get("ExpenseDate") or ""
+        if not d or (start and d < start) or (end and d > end):
+            continue
+        p = r.get("Product") or "-"
+        o = agg.setdefault(p, {"product": p, "name": (r.get("ProductZh") or p),
+                               "pretax": 0.0, "payable": 0.0})
+        o["pretax"] += num(r.get("PretaxAmount"))
+        o["payable"] += num(r.get("PayableAmount"))
+    items = [{**o, "pretax": round(o["pretax"], 2), "payable": round(o["payable"], 2)}
+             for o in agg.values()]
+    items.sort(key=lambda x: -x["pretax"])
+    return {"total": round(sum(i["pretax"] for i in items), 2),
+            "payable": round(sum(i["payable"] for i in items), 2),
+            "byProduct": items,
+            "range": date_range}
+
+
 def num(v):
     try:
         return float(v)
@@ -215,6 +261,19 @@ def main():
     with open(os.path.join(DATA, "ark_daily_rows.json"), "w", encoding="utf-8") as f:
         json.dump(rows, f, ensure_ascii=False)
     ledger = aggregate(rows)
+    acc_rows = []
+    for m in MONTHS:
+        acc_rows.extend(fetch_account_month(m))
+    seen_a, acc = set(), []
+    for r in acc_rows:
+        k = (r.get("ExpenseDate"), r.get("Product"), r.get("Project"),
+             r.get("BillDetailId") or r.get("SplitBillDetailId"),
+             r.get("ChargeItemCode"), r.get("PretaxAmount"))
+        if k in seen_a:
+            continue
+        seen_a.add(k)
+        acc.append(r)
+    ledger["account"] = account_summary(acc, ledger["dateRange"])
     with open(os.path.join(DATA, "ledger.json"), "w", encoding="utf-8") as f:
         json.dump(ledger, f, ensure_ascii=False, indent=1)
     print(json.dumps({
