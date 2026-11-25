@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-23 16:08:35",
+ "generatedAt": "2026-11-25 14:10:05",
  "currency": "CNY",
  "source": "火山引擎账单中心 · 分账明细（ListSplitBillDetail，按天×项目）",
  "note": "分账明细存在 T+2 延迟；当日数据可能仍在滚动更新。消费金额=税前应付(PretaxAmount)，原价=刊例价(OriginalBillAmount)，优惠=原价-税前应付。",
@@ -9,12 +9,12 @@
  ],
  "dateRange": {
   "start": "2026-10-15",
-  "end": "2026-11-23"
+  "end": "2026-11-25"
  },
- "totalPretax": 218648.64,
- "totalOriginal": 447110.55,
- "totalDiscount": 228461.91,
- "totalTokens": 13875040444349.0,
+ "totalPretax": 282727.84,
+ "totalOriginal": 581593.03,
+ "totalDiscount": 298865.19,
+ "totalTokens": 18270487103048.0,
  "cells": [
   {
    "date": "2026-10-15",
@@ -1481,113 +1481,311 @@
   },
   {
    "date": "2026-11-23",
-   "project": "-",
-   "projectName": "未归属项目",
-   "pretax": 0.0,
-   "payable": 0.0,
-   "original": 0.01,
-   "tokens": 20480.0,
-   "rows": 1,
-   "discount": 0.01
-  },
-  {
-   "date": "2026-11-23",
    "project": "jj-DeepSeek-1117",
    "projectName": "佳杰-DeepSeek-1117",
-   "pretax": 115.36,
-   "payable": 115.36,
-   "original": 115.74,
-   "tokens": 545638266.0,
+   "pretax": 173.22,
+   "payable": 173.22,
+   "original": 173.76,
+   "tokens": 826945966.0,
    "rows": 3,
-   "discount": 0.38
+   "discount": 0.54
   },
   {
    "date": "2026-11-23",
    "project": "jsdmjuhe-1105",
    "projectName": "江苏端木聚合平台自用-1105",
-   "pretax": 10.55,
-   "payable": 10.55,
-   "original": 24.98,
-   "tokens": 51342542003.0,
+   "pretax": 33.9,
+   "payable": 33.9,
+   "original": 76.91,
+   "tokens": 137703341606.0,
    "rows": 6,
-   "discount": 14.43
+   "discount": 43.01
   },
   {
    "date": "2026-11-23",
    "project": "lt4",
    "projectName": "灵通4-deepseek1111",
-   "pretax": 15.13,
-   "payable": 15.13,
-   "original": 25.67,
-   "tokens": 80208821376.0,
+   "pretax": 25.43,
+   "payable": 25.43,
+   "original": 47.03,
+   "tokens": 172259412103.0,
    "rows": 6,
-   "discount": 10.54
+   "discount": 21.6
   },
   {
    "date": "2026-11-23",
    "project": "lt8-1118",
    "projectName": "灵通8-1118-deepseek",
-   "pretax": 15.09,
-   "payable": 15.09,
-   "original": 29.69,
-   "tokens": 141971621080.0,
+   "pretax": 386.07,
+   "payable": 386.07,
+   "original": 930.84,
+   "tokens": 283854681313.0,
    "rows": 6,
-   "discount": 14.6
+   "discount": 544.77
   },
   {
    "date": "2026-11-23",
    "project": "njzc-1105",
    "projectName": "南京智创-1105",
-   "pretax": 428.87,
-   "payable": 428.87,
-   "original": 721.04,
-   "tokens": 220356229375.0,
+   "pretax": 854.91,
+   "payable": 854.91,
+   "original": 1428.52,
+   "tokens": 362239289608.0,
    "rows": 6,
-   "discount": 292.17
+   "discount": 573.61
   },
   {
    "date": "2026-11-23",
    "project": "njzc3-1116",
    "projectName": "南京智创3-1116",
-   "pretax": 14994.13,
-   "payable": 14994.13,
-   "original": 31229.13,
-   "tokens": 220356229375.0,
+   "pretax": 25321.6,
+   "payable": 25321.6,
+   "original": 53228.33,
+   "tokens": 362239289608.0,
    "rows": 6,
-   "discount": 16235.0
+   "discount": 27906.73
   },
   {
    "date": "2026-11-23",
    "project": "sbr-deepseek-1120",
    "projectName": "成都思博睿-1120-deepseek",
-   "pretax": 9.84,
-   "payable": 9.84,
-   "original": 23.54,
-   "tokens": 38919989362.0,
+   "pretax": 31.32,
+   "payable": 31.32,
+   "original": 71.14,
+   "tokens": 103674739095.0,
    "rows": 6,
-   "discount": 13.7
+   "discount": 39.82
   },
   {
    "date": "2026-11-23",
    "project": "ttlt-1105",
    "projectName": "抬头灵通-1105-deepseek",
-   "pretax": 4451.51,
-   "payable": 4451.51,
-   "original": 9553.65,
-   "tokens": 220407780243.0,
+   "pretax": 7679.72,
+   "payable": 7679.72,
+   "original": 16655.62,
+   "tokens": 362296294592.0,
    "rows": 12,
-   "discount": 5102.14
+   "discount": 8975.9
   },
   {
    "date": "2026-11-23",
    "project": "youhy-1015",
    "projectName": "优号云-正式环境-1015",
-   "pretax": 266.85,
-   "payable": 266.85,
-   "original": 542.91,
-   "tokens": 232414403367.0,
-   "rows": 20,
-   "discount": 276.06
+   "pretax": 381.42,
+   "payable": 381.42,
+   "original": 775.36,
+   "tokens": 428633887865.0,
+   "rows": 21,
+   "discount": 393.94
+  },
+  {
+   "date": "2026-11-24",
+   "project": "jj-DeepSeek-1117",
+   "projectName": "佳杰-DeepSeek-1117",
+   "pretax": 169.06,
+   "payable": 169.06,
+   "original": 169.45,
+   "tokens": 764302937.0,
+   "rows": 3,
+   "discount": 0.39
+  },
+  {
+   "date": "2026-11-24",
+   "project": "jsdmjuhe-1105",
+   "projectName": "江苏端木聚合平台自用-1105",
+   "pretax": 17.85,
+   "payable": 17.85,
+   "original": 40.16,
+   "tokens": 96811881659.0,
+   "rows": 6,
+   "discount": 22.31
+  },
+  {
+   "date": "2026-11-24",
+   "project": "lt4",
+   "projectName": "灵通4-deepseek1111",
+   "pretax": 32.95,
+   "payable": 32.95,
+   "original": 58.41,
+   "tokens": 192200523825.0,
+   "rows": 6,
+   "discount": 25.46
+  },
+  {
+   "date": "2026-11-24",
+   "project": "lt8-1118",
+   "projectName": "灵通8-1118-deepseek",
+   "pretax": 283.75,
+   "payable": 283.75,
+   "original": 672.82,
+   "tokens": 298238270860.0,
+   "rows": 6,
+   "discount": 389.07
+  },
+  {
+   "date": "2026-11-24",
+   "project": "njzc-1105",
+   "projectName": "南京智创-1105",
+   "pretax": 1452.67,
+   "payable": 1452.67,
+   "original": 2580.07,
+   "tokens": 361571753809.0,
+   "rows": 6,
+   "discount": 1127.4
+  },
+  {
+   "date": "2026-11-24",
+   "project": "njzc3-1116",
+   "projectName": "南京智创3-1116",
+   "pretax": 22739.45,
+   "payable": 22739.45,
+   "original": 47306.71,
+   "tokens": 361571753809.0,
+   "rows": 6,
+   "discount": 24567.26
+  },
+  {
+   "date": "2026-11-24",
+   "project": "sbr-deepseek-1120",
+   "projectName": "成都思博睿-1120-deepseek",
+   "pretax": 13.35,
+   "payable": 13.35,
+   "original": 31.58,
+   "tokens": 58776357070.0,
+   "rows": 5,
+   "discount": 18.23
+  },
+  {
+   "date": "2026-11-24",
+   "project": "ttlt-1105",
+   "projectName": "抬头灵通-1105-deepseek",
+   "pretax": 8988.66,
+   "payable": 8988.66,
+   "original": 19811.75,
+   "tokens": 361597841701.0,
+   "rows": 12,
+   "discount": 10823.09
+  },
+  {
+   "date": "2026-11-24",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "pretax": 214.0,
+   "payable": 214.0,
+   "original": 441.56,
+   "tokens": 521783263211.0,
+   "rows": 21,
+   "discount": 227.56
+  },
+  {
+   "date": "2026-11-25",
+   "project": "-",
+   "projectName": "未归属项目",
+   "pretax": 0.08,
+   "payable": 0.08,
+   "original": 0.08,
+   "tokens": 537947.0,
+   "rows": 3,
+   "discount": 0.0
+  },
+  {
+   "date": "2026-11-25",
+   "project": "jj-DeepSeek-1117",
+   "projectName": "佳杰-DeepSeek-1117",
+   "pretax": 129.01,
+   "payable": 129.01,
+   "original": 129.21,
+   "tokens": 611484734.0,
+   "rows": 3,
+   "discount": 0.2
+  },
+  {
+   "date": "2026-11-25",
+   "project": "jsdmjuhe-1105",
+   "projectName": "江苏端木聚合平台自用-1105",
+   "pretax": 1.17,
+   "payable": 1.17,
+   "original": 4.33,
+   "tokens": 22794451513.0,
+   "rows": 5,
+   "discount": 3.16
+  },
+  {
+   "date": "2026-11-25",
+   "project": "lt4",
+   "projectName": "灵通4-deepseek1111",
+   "pretax": 5.45,
+   "payable": 5.45,
+   "original": 9.08,
+   "tokens": 35562538607.0,
+   "rows": 6,
+   "discount": 3.63
+  },
+  {
+   "date": "2026-11-25",
+   "project": "lt8-1118",
+   "projectName": "灵通8-1118-deepseek",
+   "pretax": 33.32,
+   "payable": 33.32,
+   "original": 78.13,
+   "tokens": 147147607320.0,
+   "rows": 6,
+   "discount": 44.81
+  },
+  {
+   "date": "2026-11-25",
+   "project": "njzc-1105",
+   "projectName": "南京智创-1105",
+   "pretax": 567.82,
+   "payable": 567.82,
+   "original": 959.94,
+   "tokens": 186897168202.0,
+   "rows": 6,
+   "discount": 392.12
+  },
+  {
+   "date": "2026-11-25",
+   "project": "njzc3-1116",
+   "projectName": "南京智创3-1116",
+   "pretax": 10052.14,
+   "payable": 10052.14,
+   "original": 20005.51,
+   "tokens": 186897168202.0,
+   "rows": 6,
+   "discount": 9953.37
+  },
+  {
+   "date": "2026-11-25",
+   "project": "sbr-deepseek-1120",
+   "projectName": "成都思博睿-1120-deepseek",
+   "pretax": 1.44,
+   "payable": 1.44,
+   "original": 4.82,
+   "tokens": 24411280975.0,
+   "rows": 5,
+   "discount": 3.38
+  },
+  {
+   "date": "2026-11-25",
+   "project": "ttlt-1105",
+   "projectName": "抬头灵通-1105-deepseek",
+   "pretax": 4686.16,
+   "payable": 4686.16,
+   "original": 10839.01,
+   "tokens": 186898401482.0,
+   "rows": 9,
+   "discount": 6152.85
+  },
+  {
+   "date": "2026-11-25",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "pretax": 110.61,
+   "payable": 110.61,
+   "original": 218.71,
+   "tokens": 343705464007.0,
+   "rows": 21,
+   "discount": 108.1
   }
  ],
  "models": [
@@ -3848,178 +4046,442 @@
   },
   {
    "date": "2026-11-23",
-   "project": "-",
-   "projectName": "未归属项目",
-   "model": "DeepSeek-V4-pro-0813",
-   "pretax": 0.0,
-   "payable": 0.0,
-   "original": 0.01,
-   "tokens": 20480.0,
-   "discount": 0.01
-  },
-  {
-   "date": "2026-11-23",
    "project": "jj-DeepSeek-1117",
    "projectName": "佳杰-DeepSeek-1117",
    "model": "DeepSeek-V4-flash-0731",
-   "pretax": 115.36,
-   "payable": 115.36,
-   "original": 115.74,
-   "tokens": 545638266.0,
-   "discount": 0.38
+   "pretax": 173.22,
+   "payable": 173.22,
+   "original": 173.76,
+   "tokens": 826945966.0,
+   "discount": 0.54
   },
   {
    "date": "2026-11-23",
    "project": "jsdmjuhe-1105",
    "projectName": "江苏端木聚合平台自用-1105",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 10.55,
-   "payable": 10.55,
-   "original": 24.98,
-   "tokens": 51342542003.0,
-   "discount": 14.43
+   "pretax": 33.9,
+   "payable": 33.9,
+   "original": 76.91,
+   "tokens": 137703341606.0,
+   "discount": 43.01
   },
   {
    "date": "2026-11-23",
    "project": "lt4",
    "projectName": "灵通4-deepseek1111",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 15.13,
-   "payable": 15.13,
-   "original": 25.67,
-   "tokens": 80208821376.0,
-   "discount": 10.54
+   "pretax": 25.43,
+   "payable": 25.43,
+   "original": 47.03,
+   "tokens": 172259412103.0,
+   "discount": 21.6
   },
   {
    "date": "2026-11-23",
    "project": "lt8-1118",
    "projectName": "灵通8-1118-deepseek",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 15.09,
-   "payable": 15.09,
-   "original": 29.69,
-   "tokens": 141971621080.0,
-   "discount": 14.6
+   "pretax": 386.07,
+   "payable": 386.07,
+   "original": 930.84,
+   "tokens": 283854681313.0,
+   "discount": 544.77
   },
   {
    "date": "2026-11-23",
    "project": "njzc-1105",
    "projectName": "南京智创-1105",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 428.87,
-   "payable": 428.87,
-   "original": 721.04,
-   "tokens": 220356229375.0,
-   "discount": 292.17
+   "pretax": 854.91,
+   "payable": 854.91,
+   "original": 1428.52,
+   "tokens": 362239289608.0,
+   "discount": 573.61
   },
   {
    "date": "2026-11-23",
    "project": "njzc3-1116",
    "projectName": "南京智创3-1116",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 14994.13,
-   "payable": 14994.13,
-   "original": 31229.13,
-   "tokens": 220356229375.0,
-   "discount": 16235.0
+   "pretax": 25321.6,
+   "payable": 25321.6,
+   "original": 53228.33,
+   "tokens": 362239289608.0,
+   "discount": 27906.73
   },
   {
    "date": "2026-11-23",
    "project": "sbr-deepseek-1120",
    "projectName": "成都思博睿-1120-deepseek",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 9.84,
-   "payable": 9.84,
-   "original": 23.54,
-   "tokens": 38919989362.0,
-   "discount": 13.7
+   "pretax": 31.32,
+   "payable": 31.32,
+   "original": 71.14,
+   "tokens": 103674739095.0,
+   "discount": 39.82
   },
   {
    "date": "2026-11-23",
    "project": "ttlt-1105",
    "projectName": "抬头灵通-1105-deepseek",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 4447.61,
-   "payable": 4447.61,
-   "original": 9549.72,
-   "tokens": 220356229375.0,
-   "discount": 5102.11
+   "pretax": 7675.09,
+   "payable": 7675.09,
+   "original": 16650.88,
+   "tokens": 362239289608.0,
+   "discount": 8975.79
   },
   {
    "date": "2026-11-23",
    "project": "ttlt-1105",
    "projectName": "抬头灵通-1105-deepseek",
    "model": "Deepseek-V4.1-Flash经济版",
-   "pretax": 3.9,
-   "payable": 3.9,
-   "original": 3.93,
-   "tokens": 51550868.0,
-   "discount": 0.03
+   "pretax": 4.63,
+   "payable": 4.63,
+   "original": 4.74,
+   "tokens": 57004984.0,
+   "discount": 0.11
   },
   {
    "date": "2026-11-23",
    "project": "youhy-1015",
    "projectName": "优号云-正式环境-1015",
    "model": "DeepSeek-V4-pro-0813",
-   "pretax": 1.86,
-   "payable": 1.86,
-   "original": 4.67,
-   "tokens": 209506.0,
-   "discount": 2.81
+   "pretax": 4.62,
+   "payable": 4.62,
+   "original": 11.58,
+   "tokens": 1880006.0,
+   "discount": 6.96
   },
   {
    "date": "2026-11-23",
    "project": "youhy-1015",
    "projectName": "优号云-正式环境-1015",
    "model": "DeepSeek-V4.1-flash",
-   "pretax": 254.17,
-   "payable": 254.17,
-   "original": 527.37,
-   "tokens": 232286312404.0,
-   "discount": 273.2
+   "pretax": 358.23,
+   "payable": 358.23,
+   "original": 745.1,
+   "tokens": 428320795065.0,
+   "discount": 386.87
   },
   {
    "date": "2026-11-23",
    "project": "youhy-1015",
    "projectName": "优号云-正式环境-1015",
    "model": "Deepseek-V4.1-Flash经济版",
-   "pretax": 10.82,
-   "payable": 10.82,
-   "original": 10.88,
-   "tokens": 127881457.0,
-   "discount": 0.06
+   "pretax": 18.57,
+   "payable": 18.57,
+   "original": 18.69,
+   "tokens": 311212794.0,
+   "discount": 0.12
+  },
+  {
+   "date": "2026-11-24",
+   "project": "jj-DeepSeek-1117",
+   "projectName": "佳杰-DeepSeek-1117",
+   "model": "DeepSeek-V4-flash-0731",
+   "pretax": 169.06,
+   "payable": 169.06,
+   "original": 169.45,
+   "tokens": 764302937.0,
+   "discount": 0.39
+  },
+  {
+   "date": "2026-11-24",
+   "project": "jsdmjuhe-1105",
+   "projectName": "江苏端木聚合平台自用-1105",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 17.85,
+   "payable": 17.85,
+   "original": 40.16,
+   "tokens": 96811881659.0,
+   "discount": 22.31
+  },
+  {
+   "date": "2026-11-24",
+   "project": "lt4",
+   "projectName": "灵通4-deepseek1111",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 32.95,
+   "payable": 32.95,
+   "original": 58.41,
+   "tokens": 192200523825.0,
+   "discount": 25.46
+  },
+  {
+   "date": "2026-11-24",
+   "project": "lt8-1118",
+   "projectName": "灵通8-1118-deepseek",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 283.75,
+   "payable": 283.75,
+   "original": 672.82,
+   "tokens": 298238270860.0,
+   "discount": 389.07
+  },
+  {
+   "date": "2026-11-24",
+   "project": "njzc-1105",
+   "projectName": "南京智创-1105",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 1452.67,
+   "payable": 1452.67,
+   "original": 2580.07,
+   "tokens": 361571753809.0,
+   "discount": 1127.4
+  },
+  {
+   "date": "2026-11-24",
+   "project": "njzc3-1116",
+   "projectName": "南京智创3-1116",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 22739.45,
+   "payable": 22739.45,
+   "original": 47306.71,
+   "tokens": 361571753809.0,
+   "discount": 24567.26
+  },
+  {
+   "date": "2026-11-24",
+   "project": "sbr-deepseek-1120",
+   "projectName": "成都思博睿-1120-deepseek",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 13.35,
+   "payable": 13.35,
+   "original": 31.58,
+   "tokens": 58776357070.0,
+   "discount": 18.23
+  },
+  {
+   "date": "2026-11-24",
+   "project": "ttlt-1105",
+   "projectName": "抬头灵通-1105-deepseek",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 8986.26,
+   "payable": 8986.26,
+   "original": 19809.24,
+   "tokens": 361571753809.0,
+   "discount": 10822.98
+  },
+  {
+   "date": "2026-11-24",
+   "project": "ttlt-1105",
+   "projectName": "抬头灵通-1105-deepseek",
+   "model": "Deepseek-V4.1-Flash经济版",
+   "pretax": 2.4,
+   "payable": 2.4,
+   "original": 2.51,
+   "tokens": 26087892.0,
+   "discount": 0.11
+  },
+  {
+   "date": "2026-11-24",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "model": "DeepSeek-V4-pro-0813",
+   "pretax": 2.22,
+   "payable": 2.22,
+   "original": 5.59,
+   "tokens": 2165427.0,
+   "discount": 3.37
+  },
+  {
+   "date": "2026-11-24",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 205.92,
+   "payable": 205.92,
+   "original": 429.95,
+   "tokens": 521666973899.0,
+   "discount": 224.03
+  },
+  {
+   "date": "2026-11-24",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "model": "Deepseek-V4.1-Flash经济版",
+   "pretax": 5.86,
+   "payable": 5.86,
+   "original": 6.02,
+   "tokens": 114123885.0,
+   "discount": 0.16
+  },
+  {
+   "date": "2026-11-25",
+   "project": "-",
+   "projectName": "未归属项目",
+   "model": "Deepseek-V4.1-Flash经济版",
+   "pretax": 0.08,
+   "payable": 0.08,
+   "original": 0.08,
+   "tokens": 537947.0,
+   "discount": 0.0
+  },
+  {
+   "date": "2026-11-25",
+   "project": "jj-DeepSeek-1117",
+   "projectName": "佳杰-DeepSeek-1117",
+   "model": "DeepSeek-V4-flash-0731",
+   "pretax": 129.01,
+   "payable": 129.01,
+   "original": 129.21,
+   "tokens": 611484734.0,
+   "discount": 0.2
+  },
+  {
+   "date": "2026-11-25",
+   "project": "jsdmjuhe-1105",
+   "projectName": "江苏端木聚合平台自用-1105",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 1.17,
+   "payable": 1.17,
+   "original": 4.33,
+   "tokens": 22794451513.0,
+   "discount": 3.16
+  },
+  {
+   "date": "2026-11-25",
+   "project": "lt4",
+   "projectName": "灵通4-deepseek1111",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 5.45,
+   "payable": 5.45,
+   "original": 9.08,
+   "tokens": 35562538607.0,
+   "discount": 3.63
+  },
+  {
+   "date": "2026-11-25",
+   "project": "lt8-1118",
+   "projectName": "灵通8-1118-deepseek",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 33.32,
+   "payable": 33.32,
+   "original": 78.13,
+   "tokens": 147147607320.0,
+   "discount": 44.81
+  },
+  {
+   "date": "2026-11-25",
+   "project": "njzc-1105",
+   "projectName": "南京智创-1105",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 567.82,
+   "payable": 567.82,
+   "original": 959.94,
+   "tokens": 186897168202.0,
+   "discount": 392.12
+  },
+  {
+   "date": "2026-11-25",
+   "project": "njzc3-1116",
+   "projectName": "南京智创3-1116",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 10052.14,
+   "payable": 10052.14,
+   "original": 20005.51,
+   "tokens": 186897168202.0,
+   "discount": 9953.37
+  },
+  {
+   "date": "2026-11-25",
+   "project": "sbr-deepseek-1120",
+   "projectName": "成都思博睿-1120-deepseek",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 1.44,
+   "payable": 1.44,
+   "original": 4.82,
+   "tokens": 24411280975.0,
+   "discount": 3.38
+  },
+  {
+   "date": "2026-11-25",
+   "project": "ttlt-1105",
+   "projectName": "抬头灵通-1105-deepseek",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 4685.83,
+   "payable": 4685.83,
+   "original": 10838.67,
+   "tokens": 186897168202.0,
+   "discount": 6152.84
+  },
+  {
+   "date": "2026-11-25",
+   "project": "ttlt-1105",
+   "projectName": "抬头灵通-1105-deepseek",
+   "model": "Deepseek-V4.1-Flash经济版",
+   "pretax": 0.33,
+   "payable": 0.33,
+   "original": 0.34,
+   "tokens": 1233280.0,
+   "discount": 0.01
+  },
+  {
+   "date": "2026-11-25",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "model": "DeepSeek-V4-pro-0813",
+   "pretax": 0.34,
+   "payable": 0.34,
+   "original": 0.86,
+   "tokens": 336104.0,
+   "discount": 0.52
+  },
+  {
+   "date": "2026-11-25",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "model": "DeepSeek-V4.1-flash",
+   "pretax": 104.97,
+   "payable": 104.97,
+   "original": 212.41,
+   "tokens": 343618023828.0,
+   "discount": 107.44
+  },
+  {
+   "date": "2026-11-25",
+   "project": "youhy-1015",
+   "projectName": "优号云-正式环境-1015",
+   "model": "Deepseek-V4.1-Flash经济版",
+   "pretax": 5.3,
+   "payable": 5.3,
+   "original": 5.45,
+   "tokens": 87104075.0,
+   "discount": 0.15
   }
  ],
  "projects": [
   {
    "id": "njzc3-1116",
    "name": "南京智创3-1116",
-   "pretax": 131304.87,
-   "payable": 131304.87,
-   "original": 270296.88,
-   "discount": 138992.01,
-   "tokens": 2089223182018.0,
-   "days": 8
+   "pretax": 174423.93,
+   "payable": 174423.93,
+   "original": 359608.3,
+   "discount": 185184.37,
+   "tokens": 2779575164262.0,
+   "days": 10
   },
   {
    "id": "ttlt-1105",
    "name": "抬头灵通-1105-deepseek",
-   "pretax": 52901.28,
-   "payable": 52901.28,
-   "original": 108131.23,
-   "discount": 55229.95,
-   "tokens": 2663097869143.0,
-   "days": 19
+   "pretax": 69804.31,
+   "payable": 69804.31,
+   "original": 145883.96,
+   "discount": 76079.65,
+   "tokens": 3353482626675.0,
+   "days": 21
   },
   {
    "id": "youhy-1015",
    "name": "优号云-正式环境-1015",
-   "pretax": 20332.35,
-   "payable": 20332.35,
-   "original": 40468.18,
-   "discount": 20135.83,
-   "tokens": 4107364831728.0,
-   "days": 39
+   "pretax": 20771.53,
+   "payable": 20771.53,
+   "original": 41360.9,
+   "discount": 20589.37,
+   "tokens": 5169073043444.0,
+   "days": 41
   },
   {
    "id": "njzc2-1112",
@@ -4034,32 +4496,42 @@
   {
    "id": "njzc-1105",
    "name": "南京智创-1105",
-   "pretax": 2680.97,
-   "payable": 2680.97,
-   "original": 5100.45,
-   "discount": 2419.48,
-   "tokens": 1700165078372.0,
-   "days": 7
+   "pretax": 5127.5,
+   "payable": 5127.5,
+   "original": 9347.94,
+   "discount": 4220.44,
+   "tokens": 2390517060616.0,
+   "days": 9
   },
   {
    "id": "jj-DeepSeek-1117",
    "name": "佳杰-DeepSeek-1117",
-   "pretax": 1062.73,
-   "payable": 1062.73,
-   "original": 1064.73,
-   "discount": 2.0,
-   "tokens": 4911627964.0,
+   "pretax": 1418.66,
+   "payable": 1418.66,
+   "original": 1421.41,
+   "discount": 2.75,
+   "tokens": 6568723335.0,
+   "days": 9
+  },
+  {
+   "id": "lt8-1118",
+   "name": "灵通8-1118-deepseek",
+   "pretax": 822.28,
+   "payable": 822.28,
+   "original": 1915.78,
+   "discount": 1093.5,
+   "tokens": 1721557366364.0,
    "days": 7
   },
   {
    "id": "lt4",
    "name": "灵通4-deepseek1111",
-   "pretax": 309.2,
-   "payable": 309.2,
-   "original": 513.89,
-   "discount": 204.69,
-   "tokens": 1193154127170.0,
-   "days": 12
+   "pretax": 357.9,
+   "payable": 357.9,
+   "original": 602.74,
+   "discount": 244.84,
+   "tokens": 1512967780329.0,
+   "days": 14
   },
   {
    "id": "zouxz-1022",
@@ -4072,24 +4544,24 @@
    "days": 6
   },
   {
-   "id": "lt8-1118",
-   "name": "灵通8-1118-deepseek",
-   "pretax": 134.23,
-   "payable": 134.23,
-   "original": 263.68,
-   "discount": 129.45,
-   "tokens": 1134288427951.0,
-   "days": 5
-  },
-  {
    "id": "jsdmjuhe-1105",
    "name": "江苏端木聚合平台自用-1105",
-   "pretax": 55.07,
-   "payable": 55.07,
-   "original": 124.17,
-   "discount": 69.1,
-   "tokens": 303545434856.0,
-   "days": 17
+   "pretax": 97.44,
+   "payable": 97.44,
+   "original": 220.59,
+   "discount": 123.15,
+   "tokens": 509512567631.0,
+   "days": 19
+  },
+  {
+   "id": "sbr-deepseek-1120",
+   "name": "成都思博睿-1120-deepseek",
+   "pretax": 48.28,
+   "payable": 48.28,
+   "original": 114.24,
+   "discount": 65.96,
+   "tokens": 214145564526.0,
+   "days": 5
   },
   {
    "id": "zhoujing-1021",
@@ -4102,14 +4574,14 @@
    "days": 2
   },
   {
-   "id": "sbr-deepseek-1120",
-   "name": "成都思博睿-1120-deepseek",
-   "pretax": 12.01,
-   "payable": 12.01,
-   "original": 30.24,
-   "discount": 18.23,
-   "tokens": 66203176748.0,
-   "days": 3
+   "id": "-",
+   "name": "未归属项目",
+   "pretax": 0.08,
+   "payable": 0.08,
+   "original": 0.08,
+   "discount": 0.0,
+   "tokens": 3537947.0,
+   "days": 5
   },
   {
    "id": "lt2-1106",
@@ -4119,16 +4591,6 @@
    "original": 0.11,
    "discount": 0.09,
    "tokens": 1440997582.0,
-   "days": 5
-  },
-  {
-   "id": "-",
-   "name": "未归属项目",
-   "pretax": 0.0,
-   "payable": 0.0,
-   "original": 0.01,
-   "discount": 0.01,
-   "tokens": 3020480.0,
    "days": 5
   }
  ],
@@ -4486,11 +4948,29 @@
   },
   {
    "date": "2026-11-23",
-   "pretax": 20307.33,
-   "payable": 20307.33,
-   "original": 42266.36,
-   "discount": 21959.03,
-   "tokens": 1206523274927.0,
+   "pretax": 34887.59,
+   "payable": 34887.59,
+   "original": 73387.51,
+   "discount": 38499.92,
+   "tokens": 2213727881756.0,
+   "projects": 9
+  },
+  {
+   "date": "2026-11-24",
+   "pretax": 33911.74,
+   "payable": 33911.74,
+   "original": 71112.51,
+   "discount": 37200.77,
+   "tokens": 2253315948881.0,
+   "projects": 9
+  },
+  {
+   "date": "2026-11-25",
+   "pretax": 15587.2,
+   "payable": 15587.2,
+   "original": 32248.82,
+   "discount": 16661.62,
+   "tokens": 1134926102989.0,
    "projects": 10
   }
  ],
@@ -4512,50 +4992,50 @@
   },
   {
    "month": "2026-11",
-   "pretax": 216712.61,
-   "original": 443189.92,
-   "discount": 226477.31,
-   "tokens": 13836047520910.0,
+   "pretax": 280791.81,
+   "original": 577672.4,
+   "discount": 296880.59,
+   "tokens": 18231494179609.0,
    "projectCount": 13,
-   "dayCount": 23,
+   "dayCount": 25,
    "byProject": {
-    "youhy-1015": 18580.1,
-    "sbr-deepseek-1120": 12.01,
-    "ttlt-1105": 52901.28,
+    "ttlt-1105": 69804.31,
+    "njzc3-1116": 174423.93,
+    "youhy-1015": 19019.28,
+    "jsdmjuhe-1105": 97.44,
+    "lt4": 357.9,
+    "njzc-1105": 5127.5,
     "lt2-1106": 0.02,
-    "njzc3-1116": 131304.87,
-    "lt8-1118": 134.23,
-    "njzc-1105": 2680.97,
-    "njzc2-1112": 9671.93,
-    "lt4": 309.2,
-    "-": 0.0,
-    "jsdmjuhe-1105": 55.07,
-    "jj-DeepSeek-1117": 1062.73,
-    "zouxz-1022": 0.2
+    "zouxz-1022": 0.2,
+    "sbr-deepseek-1120": 48.28,
+    "lt8-1118": 822.28,
+    "-": 0.08,
+    "jj-DeepSeek-1117": 1418.66,
+    "njzc2-1112": 9671.93
    }
   }
  ],
  "account": {
-  "total": 672169.84,
-  "payable": 672169.84,
+  "total": 749912.07,
+  "payable": 749912.07,
   "byProduct": [
    {
     "product": "auth_individual_source",
     "name": "身份认证（有源认证）",
-    "pretax": 453284.62,
-    "payable": 453284.62
+    "pretax": 466995.25,
+    "payable": 466995.25
    },
    {
     "product": "ark_open_source_llm",
     "name": "开源LLM模型",
-    "pretax": 218726.22,
-    "payable": 218726.22
+    "pretax": 282727.68,
+    "payable": 282727.68
    },
    {
     "product": "SearchInfinity",
     "name": "融合信息搜索",
-    "pretax": 159.0,
-    "payable": 159.0
+    "pretax": 189.14,
+    "payable": 189.14
    },
    {
     "product": "TOS",
@@ -4578,7 +5058,7 @@
   ],
   "range": {
    "start": "2026-10-15",
-   "end": "2026-11-23"
+   "end": "2026-11-25"
   }
  }
 }
