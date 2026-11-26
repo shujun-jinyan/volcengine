@@ -20,7 +20,7 @@ PROJECTS = [
     ("njzc3-1116", "南京智创3-1116", "api-key-20261116-njzc3"),
 ]
 DETAIL_HEADERS = ["日期", "计费项", "用量", "单位", "原价金额(元)"]
-SUMMARY_HEADERS = ["项目归属", "API 名称", "消费总原价金额(元)"]
+SUMMARY_HEADERS = ["项目归属", "API 名称", "消费总原价金额(元)", "应付金额(元)"]
 
 THIN = Side(style="thin", color="D9DEE7")
 BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
@@ -62,15 +62,17 @@ def fetch_detail(project):
 
 
 def aggregate(rows):
-    agg = defaultdict(lambda: [0.0, 0.0])
+    agg = defaultdict(lambda: [0.0, 0.0, 0.0])
     for r in rows:
         key = (r.get("ExpenseDate") or "", r.get("Element") or r.get("ChargeItemCode") or "-",
                r.get("Unit") or "")
         agg[key][0] += num(r.get("Count"))
         agg[key][1] += num(r.get("OriginalBillAmount"))
-    out = [[d, e, round(c, 3), u, round(o, 4)] for (d, e, u), (c, o) in agg.items()]
+        agg[key][2] += num(r.get("PayableAmount"))
+    out = [[d, e, round(c, 3), u, round(o, 4)] for (d, e, u), (c, o, _) in agg.items()]
     out.sort(key=lambda x: (x[0], x[1]))
-    return out
+    pay_total = round(sum(v[2] for v in agg.values()), 2)
+    return out, pay_total
 
 
 def style_header(ws, headers):
@@ -123,39 +125,43 @@ def main():
     style_header(ws0, SUMMARY_HEADERS)
     # 先占位，等明细算完回填
     totals = []
+    pays = []
     sheets = []
     for pid, pname, api in PROJECTS:
         print(f"fetch {pid}", file=sys.stderr)
-        data = aggregate(fetch_detail(pid))
+        data, pay = aggregate(fetch_detail(pid))
         sheets.append((pid, pname, api, data))
         totals.append(round(sum(r[4] for r in data), 2))
+        pays.append(pay)
 
     for i, (pid, pname, api, data) in enumerate(sheets, start=2):
         label = f"{pid}（{pname}）"
         ws0.cell(i, 1, label)
         ws0.cell(i, 2, api)
         ws0.cell(i, 3, totals[i - 2])
-        ws0.cell(i, 1).font = BODY_FONT
-        ws0.cell(i, 2).font = BODY_FONT
-        ws0.cell(i, 3).font = BODY_FONT
-        for c in (1, 2, 3):
+        ws0.cell(i, 4, pays[i - 2])
+        for c in (1, 2, 3, 4):
+            ws0.cell(i, c).font = BODY_FONT
             ws0.cell(i, c).border = BORDER
             if i % 2 == 1:
                 ws0.cell(i, c).fill = ZEBRA
         ws0.cell(i, 3).number_format = "#,##0.00####"
         ws0.cell(i, 3).alignment = Alignment(horizontal="right")
+        ws0.cell(i, 4).number_format = "#,##0.00####"
+        ws0.cell(i, 4).alignment = Alignment(horizontal="right")
 
-    tr = total_row(ws0, len(sheets), {3}, 3)
+    tr = total_row(ws0, len(sheets), {3, 4}, 4)
     ws0.cell(tr, 1, "合计").font = TOTAL_FONT
     ws0.cell(tr, 2, "").font = TOTAL_FONT
-    for col, w in zip("ABC", (34, 32, 22)):
+    for col, w in zip("ABCD", (34, 32, 22, 20)):
         ws0.column_dimensions[col].width = w
     note = tr + 2
-    ws0.merge_cells(f"A{note}:C{note}")
-    ws0[f"A{note}"] = "统计区间：2026-11-01 ~ 2026-11-26；口径：分账明细原价金额(OriginalBillAmount)；当日数据 T+1 滚动，可能微调。"
+    ws0.merge_cells(f"A{note}:D{note}")
+    ws0[f"A{note}"] = ("统计区间：2026-11-01 ~ 2026-11-26。原价=刊例价(OriginalBillAmount)，应付=优惠后应付(PayableAmount)；"
+                       "账号账单默认展示的是应付金额。当日数据 T+1 滚动，可能微调。")
     ws0[f"A{note}"].font = Font(name="Arial", size=9, italic=True, color="667085")
     ws0[f"A{note}"].alignment = Alignment(vertical="center", wrap_text=True)
-    ws0.row_dimensions[note].height = 30
+    ws0.row_dimensions[note].height = 36
 
     for pid, pname, api, data in sheets:
         ws = wb.create_sheet(pid)
